@@ -25,8 +25,25 @@
   <entry>
     <title>数学分析(一): 实数理论</title>
     <url>/2020/03/18/analysis1/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础之一, 毕竟取极限对有理数是不封闭的, 没有实数啥也干不了. 实数的性质对分析学也有诸多帮助.<br>然而实数理论是比较庞大的, 如果真深入起来会涉及到拓扑和抽代的知识. 本文仅介绍实数公理及一种实数构造方法: 戴德金分割. 并简单讨论构造出来的实数的运算和性质.<br><a id="more"></a></p>
-<h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><h4 id="其他构造方法"><a href="#其他构造方法" class="headerlink" title="其他构造方法"></a>其他构造方法</h4><h3 id="3-实数域的序"><a href="#3-实数域的序" class="headerlink" title="3. 实数域的序"></a>3. 实数域的序</h3><h3 id="4-实数域的性质"><a href="#4-实数域的性质" class="headerlink" title="4. 实数域的性质"></a>4. 实数域的性质</h3><h4 id="稠密性"><a href="#稠密性" class="headerlink" title="稠密性"></a>稠密性</h4><h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性(戴德金定理)"></a>完备性(戴德金定理)</h4><h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3>]]></content>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础之一, 毕竟取极限对有理数是不封闭的, 没有实数啥也干不了. 实数的性质对分析学也有诸多帮助.<br>然而实数理论是比较庞大的, 如果真深入起来会涉及到拓扑和抽代的知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割. 并简单讨论构造出来的实数的运算和性质.<br><a id="more"></a></p>
+<h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理自上而下地给出实数域的定义, 它刻画了实数域的本质属性. 事实上, 构造实数的方法很多, 但构造出来的实数域, 可以证明它们只要满足实数公理, 便是同构的. 这便是实数公理的意义.</p>
+<h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
+<li><p>$\forall a,b\in\mathbb{R}\;\exists!a+b\in\mathbb{R}$, 称 $a+b$ 是 $a$ 与 $b$ 的和.</p>
+</li>
+<li><p>$\forall a,b\in\mathbb{R}\;\exists!a\cdot b\in\mathbb{R}$, 称 $a\cdot b$ 是 $a$ 与 $b$ 的积.</p>
+</li>
+<li><p>$\forall a,b,c\in\mathbb{R},\;(a+b)+c=a+(b+c)\,\land\,(a\cdot b)\cdot c=a\cdot (b\cdot c)$. (结合律)</p>
+</li>
+<li><p>$\forall a,b\in\mathbb{R},\;a+b=b+a\,\land\,a\cdot b=b\cdot a$. (交换律)</p>
+</li>
+<li><p>$\forall a,b,c\in\mathbb{R},\;(a+b)\cdot c=a \cdot b+a\cdot c$. (分配律)</p>
+</li>
+<li><p>$\forall a\in\mathbb{R}\;a+0=a\,\land\,a\cdot 1=a,$ 其中 $0,1\in\mathbb{R}$. (单位元律)</p>
+</li>
+<li><p>$\forall a\in\mathbb{R}\;\exists!-a\;s.t.\; a+(-a)=0\,,\forall a\in\mathbb{R}^*\;\exists!\;a^{-1}\;s.t.\;a\cdot(a^{-1})=1$. (逆元律)</p>
+</li>
+</ul>
+<h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><h4 id="其他构造方法"><a href="#其他构造方法" class="headerlink" title="其他构造方法"></a>其他构造方法</h4><h3 id="3-实数域的序"><a href="#3-实数域的序" class="headerlink" title="3. 实数域的序"></a>3. 实数域的序</h3><h3 id="4-实数域的性质"><a href="#4-实数域的性质" class="headerlink" title="4. 实数域的性质"></a>4. 实数域的性质</h3><h4 id="稠密性"><a href="#稠密性" class="headerlink" title="稠密性"></a>稠密性</h4><h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性(戴德金定理)"></a>完备性(戴德金定理)</h4><h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3>]]></content>
       <categories>
         <category>数学</category>
       </categories>
