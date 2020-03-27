@@ -94,7 +94,26 @@
 \displaystyle-\pi+\arctan\frac{x-y}{1+xy}\;\;\;\;(x<0\,\land\,xy<-1)\\
 \end{cases}</script></li>
 </ul>
-<h4 id="反三角函数的二倍"><a href="#反三角函数的二倍" class="headerlink" title="反三角函数的二倍"></a>反三角函数的二倍</h4>]]></content>
+<h4 id="反三角函数的二倍"><a href="#反三角函数的二倍" class="headerlink" title="反三角函数的二倍"></a>反三角函数的二倍</h4><ul>
+<li><strong>反正弦</strong><script type="math/tex; mode=display">2\arcsin x=
+\begin{cases}
+\displaystyle\arcsin(2x\sqrt{1-x^2})\;\;\;\;(|x|\leq\frac{\sqrt{2}}{2})\\
+\displaystyle\pi-\arcsin(2x\sqrt{1-x^2})\;\;\;\;(x>\frac{\sqrt{2}}{2})\\
+\displaystyle-\pi-\arcsin(2x\sqrt{1-x^2})\;\;\;\;(x<-\frac{\sqrt{2}}{2})\\
+\end{cases}</script></li>
+<li><strong>反余弦</strong><script type="math/tex; mode=display">2\arccos x=
+\begin{cases}
+\displaystyle\arccos(2x^2-1)\;\;\;\;(x\geq0)\\
+\displaystyle 2\pi-\arccos(2x^2-1)\;\;\;\;(x<0)\\
+\end{cases}</script></li>
+<li><strong>反正切</strong><script type="math/tex; mode=display">2\arctan x=
+\begin{cases}
+\displaystyle\arctan\frac{2x}{1-x^2}\;\;\;\;(|x|<1)\\
+\displaystyle\pi+\arctan\frac{2x}{1-x^2}\;\;\;\;(x>1)\\
+\displaystyle-\pi+\arctan\frac{2x}{1-x^2}\;\;\;\;(x<-1)\\
+\end{cases}</script>上面一堆公式确实很容易用错$,$ 但是不确定的时候查查$,$ 用多了也就熟练了$.$</li>
+</ul>
+]]></content>
       <categories>
         <category>数学</category>
       </categories>
