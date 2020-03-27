@@ -28,20 +28,73 @@
     <url>/2020/03/20/trigonometric/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>三角函数、反三角函数是十分重要的基本初等函数$,$ 熟悉它们的性质和变形有时可以大大节约时间$.$<di><br>本文将整理一些重要的三角恒等式$,$ 但不讨论三角函数与复数的关系$,$ 也不涉及幂级数的内容$.$<br><a id="more"></a></p>
 <h3 id="1-三角函数"><a href="#1-三角函数" class="headerlink" title="1. 三角函数"></a>1. 三角函数</h3><p>三角函数的定义是个有趣的东西$,$ 初等的单位圆定义是不严谨的$,$ 因为在初等数学中并不能定义弧长$,$ 就更没有弧度制$.$ 不过这并不妨碍我们使用它$.$<di><br>关于它们的性质$,$ 无非就是一张图像的事$.$</p>
-<h4 id="基本关系"><a href="#基本关系" class="headerlink" title="基本关系"></a>基本关系</h4><script type="math/tex; mode=display">\sin\theta\csc\theta=1,\,\cos\theta\sec\theta=1,\,\tan\theta\cot\theta=1.</script><script type="math/tex; mode=display">\frac{\sin\theta}{\cos\theta}=\frac{\sec\theta}{\csc\theta}=\tan\theta.</script><script type="math/tex; mode=display">\sin^2\theta+\cos^2\theta=1,\,1+\tan^2\theta=\sec^2\theta,\,1+\cot^2\theta=\csc^2\theta.</script><p>由于存在这些基本关系$,$ 接下去我们主要研究正弦、余弦和正切函数$.$</p>
-<h4 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h4><script type="math/tex; mode=display">\sin(\theta+2\pi)=\sin\theta,\,\cos(\theta+2\pi)=\cos\theta,\,\tan(\theta+\pi)=\tan\theta.</script><script type="math/tex; mode=display">\sin(\theta+\pi)=-\sin\theta,\,\cos(\theta+\pi)=-\cos\theta,\,\tan(\theta+\frac{\pi}{2})=-\tan\theta.</script><script type="math/tex; mode=display">\sin(-\theta)=-\sin\theta,\,\cos(-\theta)=\cos\theta,\,\tan(-\theta)=-\tan\theta.</script><script type="math/tex; mode=display">\sin(\theta+\frac{\pi}{2})=\cos\theta,\,\cos(\theta-\frac{\pi}{2})=\sin\theta.</script><p>当然诱导公式不止这些$,$ 但灵活使用上述公式已经能够满足需要$.$</p>
-<h4 id="和差角公式"><a href="#和差角公式" class="headerlink" title="和差角公式"></a>和差角公式</h4><script type="math/tex; mode=display">\sin(\alpha\pm\beta)=sin\alpha\cos\beta\pm\cos\alpha\sin\beta,</script><script type="math/tex; mode=display">\cos(\alpha\pm\beta)=cos\alpha\cos\beta\mp\sin\alpha\sin\beta,</script><script type="math/tex; mode=display">\tan(\alpha\pm\beta)=\frac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}.</script><p>这是三角恒等变换的核心$,$ 可以先使用向量证明其中一条$,$ 再使用诱导公式推导剩余的$.$</p>
-<h4 id="倍角公式"><a href="#倍角公式" class="headerlink" title="倍角公式"></a>倍角公式</h4><script type="math/tex; mode=display">\sin 2\theta=2sin\theta\cos\theta,</script><script type="math/tex; mode=display">\cos2\theta=\cos^2\theta-\sin^2\theta=2\cos^2\theta-1=1-2\sin^2\theta,</script><script type="math/tex; mode=display">\tan2\theta=\frac{2\tan\theta}{1-\tan^2\theta}.</script><p>给出一个更一般的公式$:$</p>
-<script type="math/tex; mode=display">\cos n\theta+i\sin n\theta=(\cos\theta+i\sin\theta)^n.</script><h4 id="辅助角公式"><a href="#辅助角公式" class="headerlink" title="辅助角公式"></a>辅助角公式</h4><script type="math/tex; mode=display">a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\arctan\frac{b}{a})\;\;\;\;(a>0),</script><script type="math/tex; mode=display">a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\cos(\theta+\arctan\frac{a}{b})\;\;\;\;(b>0).</script><h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><script type="math/tex; mode=display">\sin^2\theta=\frac{1-\cos2\theta}{2},\,\cos^2\theta=\frac{\cos2\theta-1}{2}.</script><h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><script type="math/tex; mode=display">\sin\theta=\frac{2\tan\frac{\theta}{2}}{1+\tan^2\frac{\theta}{2}},</script><script type="math/tex; mode=display">\cos\theta=\frac{1-\tan^2\frac{\theta}{2}}{1+\tan^2\frac{\theta}{2}},</script><script type="math/tex; mode=display">\tan\theta=\frac{2\tan^2\frac{\theta}{2}}{1-\tan^2\frac{\theta}{2}}.</script><p>这组公式主要用于三角换元$.$</p>
-<h4 id="积化和差公式"><a href="#积化和差公式" class="headerlink" title="积化和差公式"></a>积化和差公式</h4><script type="math/tex; mode=display">\sin\alpha\sin\beta=-\frac{\cos(\alpha+\beta)-\cos(\alpha-\beta)}{2},</script><script type="math/tex; mode=display">\sin\alpha\cos\beta=\frac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2},</script><script type="math/tex; mode=display">\cos\alpha\sin\beta=\frac{\sin(\alpha+\beta)-\sin(\alpha-\beta)}{2},</script><script type="math/tex; mode=display">\cos\alpha\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}.</script><h4 id="和差化积公式"><a href="#和差化积公式" class="headerlink" title="和差化积公式"></a>和差化积公式</h4><script type="math/tex; mode=display">\sin\alpha+\sin\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2},</script><script type="math/tex; mode=display">\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2},</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2},</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}.</script><p>上面两组公式看似复杂$,$ 其实非常好记$,$ 也较为常用$.$</p>
-<h3 id="2-反三角函数"><a href="#2-反三角函数" class="headerlink" title="2. 反三角函数"></a>2. 反三角函数</h3><p>显然反三角函数不是三角函数的反函数$.$ 具体地$,$ 反正弦函数是正弦函数在 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}]$ 上的反函数$,$ 反余弦函数是正弦函数在 $\displaystyle[0,\pi]$ 上的反函数$,$ 反正切函数是正切函数在 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}]$ 上的反函数$.$<di><br>下面列举一些反三角函数的性质$:$</p>
+<h4 id="基本关系"><a href="#基本关系" class="headerlink" title="基本关系"></a>基本关系</h4><script type="math/tex; mode=display">\sin\theta\csc\theta=1,\,\cos\theta\sec\theta=1,\,\tan\theta\cot\theta=1</script><script type="math/tex; mode=display">\frac{\sin\theta}{\cos\theta}=\frac{\sec\theta}{\csc\theta}=\tan\theta</script><script type="math/tex; mode=display">\sin^2\theta+\cos^2\theta=1,\,1+\tan^2\theta=\sec^2\theta,\,1+\cot^2\theta=\csc^2\theta</script><p>由于存在这些基本关系$,$ 接下去我们主要研究正弦、余弦和正切函数$.$</p>
+<h4 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h4><script type="math/tex; mode=display">\sin(\theta+2\pi)=\sin\theta,\,\cos(\theta+2\pi)=\cos\theta,\,\tan(\theta+\pi)=\tan\theta</script><script type="math/tex; mode=display">\sin(\theta+\pi)=-\sin\theta,\,\cos(\theta+\pi)=-\cos\theta,\,\tan(\theta+\frac{\pi}{2})=-\tan\theta</script><script type="math/tex; mode=display">\sin(-\theta)=-\sin\theta,\,\cos(-\theta)=\cos\theta,\,\tan(-\theta)=-\tan\theta</script><script type="math/tex; mode=display">\sin(\theta+\frac{\pi}{2})=\cos\theta,\,\cos(\theta-\frac{\pi}{2})=\sin\theta</script><p>当然诱导公式不止这些$,$ 但灵活使用上述公式已经能够满足需要$.$</p>
+<h4 id="和差角公式"><a href="#和差角公式" class="headerlink" title="和差角公式"></a>和差角公式</h4><script type="math/tex; mode=display">\sin(\alpha\pm\beta)=sin\alpha\cos\beta\pm\cos\alpha\sin\beta</script><script type="math/tex; mode=display">\cos(\alpha\pm\beta)=cos\alpha\cos\beta\mp\sin\alpha\sin\beta</script><script type="math/tex; mode=display">\tan(\alpha\pm\beta)=\frac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}</script><p>这是三角恒等变换的核心$,$ 可以先使用向量证明其中一条$,$ 再使用诱导公式推导剩余的$.$</p>
+<h4 id="倍角公式"><a href="#倍角公式" class="headerlink" title="倍角公式"></a>倍角公式</h4><script type="math/tex; mode=display">\sin 2\theta=2sin\theta\cos\theta</script><script type="math/tex; mode=display">\cos2\theta=\cos^2\theta-\sin^2\theta=2\cos^2\theta-1=1-2\sin^2\theta</script><script type="math/tex; mode=display">\tan2\theta=\frac{2\tan\theta}{1-\tan^2\theta}</script><p>给出一个更一般的公式$:$</p>
+<script type="math/tex; mode=display">\cos n\theta+i\sin n\theta=(\cos\theta+i\sin\theta)^n</script><h4 id="辅助角公式"><a href="#辅助角公式" class="headerlink" title="辅助角公式"></a>辅助角公式</h4><script type="math/tex; mode=display">a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\arctan\frac{b}{a})\;\;\;\;(a>0)</script><script type="math/tex; mode=display">a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\cos(\theta+\arctan\frac{a}{b})\;\;\;\;(b>0)</script><h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><script type="math/tex; mode=display">\sin^2\theta=\frac{1-\cos2\theta}{2}</script><script type="math/tex; mode=display">\cos^2\theta=\frac{\cos2\theta-1}{2}</script><h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><script type="math/tex; mode=display">\sin\theta=\frac{2\tan\frac{\theta}{2}}{1+\tan^2\frac{\theta}{2}}</script><script type="math/tex; mode=display">\cos\theta=\frac{1-\tan^2\frac{\theta}{2}}{1+\tan^2\frac{\theta}{2}}</script><script type="math/tex; mode=display">\tan\theta=\frac{2\tan^2\frac{\theta}{2}}{1-\tan^2\frac{\theta}{2}}</script><p>这组公式主要用于三角换元$.$</p>
+<h4 id="积化和差公式"><a href="#积化和差公式" class="headerlink" title="积化和差公式"></a>积化和差公式</h4><script type="math/tex; mode=display">\sin\alpha\sin\beta=-\frac{\cos(\alpha+\beta)-\cos(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\sin\alpha\cos\beta=\frac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\cos\alpha\sin\beta=\frac{\sin(\alpha+\beta)-\sin(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\cos\alpha\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}</script><h4 id="和差化积公式"><a href="#和差化积公式" class="headerlink" title="和差化积公式"></a>和差化积公式</h4><script type="math/tex; mode=display">\sin\alpha+\sin\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}</script><p>上面两组公式看似复杂$,$ 其实非常好记$,$ 也较为常用$.$</p>
+<h3 id="2-反三角函数"><a href="#2-反三角函数" class="headerlink" title="2. 反三角函数"></a>2. 反三角函数</h3><p>显然反三角函数不是三角函数的反函数$.$ 具体地$,$ 反正弦函数是正弦函数在 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}]$ 上的反函数$,$ 反余弦函数是正弦函数在 $\displaystyle[0,\pi]$ 上的反函数$,$ 反正切函数是正切函数在 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}]$ 上的反函数$.$ 这里我们只研究这三种反三角函数$.$<di><br>下面列举一些反三角函数的性质$:$</p>
 <ul>
 <li>$f(x)=\arcsin x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}],$ 在定义域上单调递增$,$ 是奇函数$.$</li>
 <li>$f(x)=\arccos x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle[0,\pi],$ 在定义域上单调递减$,$ 点 $\displaystyle(0,\frac{\pi}{2})$ 是其对称中心$.$</li>
 <li>$f(x)=\arctan x$ 的定义域是 $\mathbb{R},$ 值域是 $\displaystyle[-\frac{\pi}{2},\frac{\pi}{2}]$ 在定义域上单调递增$,$ 是奇函数$.$</li>
 </ul>
-<h4 id="基本关系-1"><a href="#基本关系-1" class="headerlink" title="基本关系"></a>基本关系</h4><h4 id="和差公式"><a href="#和差公式" class="headerlink" title="和差公式"></a>和差公式</h4><p>咕咕咕！</p>
-]]></content>
+<h4 id="基本关系-1"><a href="#基本关系-1" class="headerlink" title="基本关系"></a>基本关系</h4><ul>
+<li><strong>反正弦</strong><script type="math/tex; mode=display">\begin {aligned}
+\arcsin x&=\frac{\pi}{2}-\arccos x\\
+&=\arccos\sqrt{1-x^2}\;\;\;\;(x\geq0)\\
+&=-\arccos\sqrt{1-x^2}\;\;\;\;(x<0)\\
+&=\arctan\frac{x}{\sqrt{1-x^2}}
+\end{aligned}</script></li>
+<li><strong>反余弦</strong><script type="math/tex; mode=display">\begin {aligned}
+\arccos x&=\frac{\pi}{2}-\arcsin x\\
+&=\arcsin\sqrt{1-x^2}\;\;\;\;(x\geq0)\\
+&=-\arcsin\sqrt{1-x^2}\;\;\;\;(x<0)\\
+&=\arctan\frac{x}{\sqrt{1-x^2}}
+\end{aligned}</script></li>
+<li><strong>反正切</strong><script type="math/tex; mode=display">\begin {aligned}
+\arctan x&=\arcsin\frac{x}{\sqrt{1+x^2}}\\
+&=\arccos\frac{1}{\sqrt{1+x^2}}\;\;\;\;(x\geq0)\\
+&=-\arccos\frac{1}{\sqrt{1+x^2}}\;\;\;\;(x<0)\\
+&=\frac{\pi}{2}-\arctan\frac{1}{x}\;\;\;\;(x\geq0)\\
+&=-\frac{\pi}{2}-\arctan\frac{1}{x}\;\;\;\;(x<0)\\
+\end{aligned}</script></li>
+</ul>
+<h4 id="反三角函数的和差"><a href="#反三角函数的和差" class="headerlink" title="反三角函数的和差"></a>反三角函数的和差</h4><ul>
+<li><strong>反正弦</strong><script type="math/tex; mode=display">\arcsin x+\arcsin y=
+\begin{cases}
+\arcsin(x\sqrt{1-y^2}+y\sqrt{1-x^2})\;\;\;\;(xy\leq 0\,\lor\,x^2+y^2=1)\\
+\pi-\arcsin(x\sqrt{1-y^2}+y\sqrt{1-x^2})\;\;\;\;(x>0\,\land\,y>0\,\land\,x^2+y^2>1)\\
+-\pi-\arcsin(x\sqrt{1-y^2}+y\sqrt{1-x^2})\;\;\;\;(x<0\,\land\,y<0\,\land\,x^2+y^2>1)
+\end{cases}</script><script type="math/tex; mode=display">\arcsin x-\arcsin y=
+\begin{cases}
+\arcsin(x\sqrt{1-y^2}-y\sqrt{1-x^2})\;\;\;\;(xy\geq 0\,\lor\,x^2+y^2=1)\\
+\pi-\arcsin(x\sqrt{1-y^2}-y\sqrt{1-x^2})\;\;\;\;(x>0\,\land\,y<0\,\land\,x^2+y^2>1)\\
+-\pi-\arcsin(x\sqrt{1-y^2}-y\sqrt{1-x^2})\;\;\;\;(x<0\,\land\,y>0\,\land\,x^2+y^2>1)
+\end{cases}</script></li>
+<li><strong>反余弦</strong><script type="math/tex; mode=display">\arccos x+\arccos y=
+\begin{cases}
+\arccos[xy-\sqrt{(1-x^2)(1-y^2)}]\;\;\;\;(x+y\geq 0)\\
+2\pi-\arccos[xy-\sqrt{(1-x^2)(1-y^2)}]\;\;\;\;(x+y<0)\\
+\end{cases}</script><script type="math/tex; mode=display">\arccos x-\arccos y=
+\begin{cases}
+-\arccos[xy+\sqrt{(1-x^2)(1-y^2)}]\;\;\;\;(x\geq y)\\
+\arccos[xy+\sqrt{(1-x^2)(1-y^2)}]\;\;\;\;(x<y)\\
+\end{cases}</script></li>
+<li><strong>反正切</strong><script type="math/tex; mode=display">\arctan x+\arctan y=
+\begin{cases}
+\displaystyle\arctan\frac{x+y}{1-xy}\;\;\;\;(xy<1)\\
+\displaystyle\pi+\arctan\frac{x+y}{1-xy}\;\;\;\;(x>0\,\land\,xy>1)\\
+\displaystyle-\pi+\arctan\frac{x+y}{1-xy}\;\;\;\;(x<0\,\land\,xy>1)\\
+\end{cases}</script><script type="math/tex; mode=display">\arctan x-\arctan y=
+\begin{cases}
+\displaystyle\arctan\frac{x-y}{1+xy}\;\;\;\;(xy>-1)\\
+\displaystyle\pi+\arctan\frac{x-y}{1+xy}\;\;\;\;(x>0\,\land\,xy<-1)\\
+\displaystyle-\pi+\arctan\frac{x-y}{1+xy}\;\;\;\;(x<0\,\land\,xy<-1)\\
+\end{cases}</script></li>
+</ul>
+<h4 id="反三角函数的二倍"><a href="#反三角函数的二倍" class="headerlink" title="反三角函数的二倍"></a>反三角函数的二倍</h4>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -52,7 +105,7 @@
   <entry>
     <title>数学分析(一): 实数理论</title>
     <url>/2020/03/18/analysis1/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础之一$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的运算和性质$,$ 而略去多数证明过程$.$<br><a id="more"></a></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础之一$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R}\;\exists!x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
@@ -84,7 +137,7 @@
 <p><strong>证明</strong>&#8194; 设 $\alpha&lt;\beta,$ 则依 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在两有理数 $t,t’$ 使得 $\alpha &lt; t &lt; t’&lt; \beta.$<di><br>那么 $r’-r&gt;t’-t,$ 这与 $r’-r&lt;\epsilon,\,\epsilon$ 为任意正实数矛盾$.$ 所以原命题得证$.$</p>
 <p>这一推论实际上表明了可以用有理数唯一地逼近实数$. $</p>
 <h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性(戴德金定理)"></a>完备性(戴德金定理)</h4><p>定义实数域的分划$,$ 记作 $\textbf{A}|\textbf{A}’,$ 分划的具体定义可仿照有理数域$.$<di><br><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’,$ 要么 $\textbf{A}$ 中有最大数$,$ 要么 $\textbf{A}’$ 中有最小数$.$<di><br>这便是戴德金定理$,$ 它刻画了实数的完备性$,$ 与实数公理中的完备性公理基本等价$.$</p>
-<p><strong>证明</strong>&#8194; 设 $A=\{a\in\mathbb{Q}\,|\,a\in\textbf{A}\},\,A’=\{a’\in\mathbb{Q}\,|\,a’\in\textbf{A}’\}.$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
+<p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A,$ 其他一切有理数属于$A’,$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
 <h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集 $X$ 的上界$,$ 且此时集 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集 $X$ 的下界$,$ 且此时集 $X$ 是下有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
 <p><strong>定理</strong>&#8194; 若集合 $X$ 有界$,$ 则它必有确界$.$<di><br>确界原理与实数的完备性也是等价的$,$ 这里我们直接使用戴德金定理简单证明$.$</p>
 <p><strong>证明</strong>&#8194; 这里只讨论 $X$ 上有界时的情形$.$<di><br>$1^\circ\; X$ 中有最大数$;$<di><br>则显然这最大数是 $X$ 的上确界$.$<di><br>$2^\circ\; X$ 中没有最大数$.$<di><br>考虑实数域的分划 $\textbf{A}|\textbf{A}’,$ 其中 $\textbf{A}’$ 包含一切 $X$ 的上界$, \textbf{A}$ 包含其它一切数$.$<di><br>由于 $X$ 中没有最大数$, \textbf{A}$ 中也没有最大数$,$ 则 $\textbf{A}’$ 中必有最小数$,$ 这数即 $X$ 的上确界$.$</p>
@@ -97,9 +150,12 @@
 <p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,n\in\mathbb{N}_+,$ 则 $\sqrt[n]{\alpha}=\alpha^{\frac{1}{n}}=\sup\{\beta\in\mathbb{R}_+\,|\,\beta^n&lt;\alpha\}.$<di><br>然后便可以定义正实数的一切有理数次幂$,$ 并得到幂的运算性质$.$</p>
 <p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R},$ 则 $\alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}.$<di></p>
 <p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0\neq$ 且 $\alpha\neq1,$ 若 $\alpha^\beta=\gamma,$ 称 $\log_\alpha\gamma=\beta.$<di><br>注意这里对数的存在性和唯一性仍待证明$,$ 但即使不使用函数的观点$,$ 证明也是容易的$.$</p>
-<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$<di><br>然后取 $\displaystyle c_n=\frac{m_n}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于任意的 $\displaystyle n,C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i,$ 则称记号 $C_0.c_1c_2\cdots c_n\cdots$ 是实数 $\alpha$ 的十进制小数表示$.$</p>
+<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$<di><br>然后取 $\displaystyle c_n=\frac{m_n}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于任意的 $\displaystyle n,$ 有</p>
+<script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i,</script><p>则称记号</p>
+<script type="math/tex; mode=display">C_0.c_1c_2\cdots c_n\cdots</script><p>是实数 $\alpha$ 的十进制小数表示$.$</p>
 <p>因为可以用有理数唯一地逼近实数$,$ 所以每一个十进制小数表示对应唯一的实数$.$但是反过来并不一定$,$ 也就是说一种实数可能有多种十进制小数表示$.$<di></p>
-<p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式 $\displaystyle C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i$ 都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
+<p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式</p>
+<script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
 <p>注意到如果一个实数是有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ 否则它只有一种十进制小数表示$.$</p>
 ]]></content>
       <categories>
