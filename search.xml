@@ -4,7 +4,7 @@
     <title>数学分析(二): 数列极限</title>
     <url>/2020/03/25/analysis2/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多工具$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、求法等$.$<br><a id="more"></a></p>
-]]></content>
+<h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><h4 id="有限极限"><a href="#有限极限" class="headerlink" title="有限极限"></a>有限极限</h4><h4 id="无穷极限"><a href="#无穷极限" class="headerlink" title="无穷极限"></a>无穷极限</h4><h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><h3 id="4-有关极限计算的定理"><a href="#4-有关极限计算的定理" class="headerlink" title="4. 有关极限计算的定理"></a>4. 有关极限计算的定理</h3><h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h3 id="6-极限的应用"><a href="#6-极限的应用" class="headerlink" title="6. 极限的应用"></a>6. 极限的应用</h3><h4 id="自然常数-textbf-e"><a href="#自然常数-textbf-e" class="headerlink" title="自然常数$\textbf{e}$"></a>自然常数$\textbf{e}$</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -22,12 +22,19 @@
 <p>根据定义一通积分$,$ 得到双曲角的值为 $\ln(x+y),$ 于是我们可以得到双曲函数的初等表达式$:$</p>
 <script type="math/tex; mode=display">\sinh x=\frac{e^x-e^{-x}}{2},\,\cosh x=\frac{e^x+e^{-x}}{2}\,\tanh x=\frac{e^x-e^{-x}}{e^x+e^{-x}}.</script><h3 id="2-双曲函数的性质"><a href="#2-双曲函数的性质" class="headerlink" title="2. 双曲函数的性质"></a>2. 双曲函数的性质</h3><p>上面三类双曲函数的定义域都是 $\mathbb{R}.$</p>
 <ul>
-<li>$f(x)=\sinh x$ 的值域是 $\mathbb{R},$ 在定义域上单调递增$,$ 是奇函数$.$</li>
-<li>$f(x)=\cosh x$ 的值域是 $[1,+\infty),$ 在 $[0,+\infty)$ 上单调递增$,$ 是偶函数$.$</li>
-<li>$f(x)=\tanh x$ 的值域是 $[-1,1],$ 在定义域上单调递增$,$ 是奇函数$.$</li>
+<li>$y=\sinh x$ 的值域是 $\mathbb{R},$ 在定义域上单调递增$,$ 是奇函数$.$</li>
+<li>$y=\cosh x$ 的值域是 $[1,+\infty),$ 在 $[0,+\infty)$ 上单调递增$,$ 是偶函数$.$</li>
+<li>$y=\tanh x$ 的值域是 $[-1,1],$ 在定义域上单调递增$,$ 是奇函数$.$</li>
 </ul>
-<h3 id="3-恒等变换"><a href="#3-恒等变换" class="headerlink" title="3. 恒等变换"></a>3. 恒等变换</h3><h4 id="基本关系"><a href="#基本关系" class="headerlink" title="基本关系"></a>基本关系</h4><script type="math/tex; mode=display">\cosh^2 x-\sinh^2=1</script><h4 id="双曲函数的和差"><a href="#双曲函数的和差" class="headerlink" title="双曲函数的和差"></a>双曲函数的和差</h4><script type="math/tex; mode=display">\sinh(x\pm y)=\sinh x\cosh y\pm\cosh x\sinh y</script><script type="math/tex; mode=display">\cosh(x\pm y)=\cosh x\cosh y\pm\sinh x\sinh y</script><script type="math/tex; mode=display">\tanh(x\pm y)=\frac{\tanh x\pm\tanh y}{1\pm \tanh x\tanh y}</script><p>这也与三角函数高度相似$.$ 其它的公式容易由此导出$,$ 或类比三角函数得出$,$ 故不再列举$.$</p>
-<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>这篇文章的内容是trivival的$,$ 旨在简单介绍双曲函数$,$ 如果你想了解更深刻的内容$,$ 请移步 <a href="gugugu">复数与三角 (双曲) 函数</a>$.$<di><br>需要少量的复分析知识$.$</p>
+<h3 id="3-恒等变换"><a href="#3-恒等变换" class="headerlink" title="3. 恒等变换"></a>3. 恒等变换</h3><h4 id="基本关系"><a href="#基本关系" class="headerlink" title="基本关系"></a>基本关系</h4><script type="math/tex; mode=display">\cosh^2 x-\sinh^2=1</script><h4 id="双曲函数的和差"><a href="#双曲函数的和差" class="headerlink" title="双曲函数的和差"></a>双曲函数的和差</h4><script type="math/tex; mode=display">\sinh(x\pm y)=\sinh x\cosh y\pm\cosh x\sinh y</script><script type="math/tex; mode=display">\cosh(x\pm y)=\cosh x\cosh y\pm\sinh x\sinh y</script><script type="math/tex; mode=display">\tanh(x\pm y)=\frac{\tanh x\pm\tanh y}{1\pm \tanh x\tanh y}</script><p>直接变形即可证明$,$ 比如<di><br>$\begin{aligned}<br>\sinh(x+y)&amp;=\frac{e^{x+y}-e^{-(x+y)}}{2}\\<br>&amp;=\frac{(e^{x+y}+e^{x-y}-e^{-x+y}-e^{-(x+y)})+(e^{x+y}-e^{x-y}+e^{-x+y}-e^{-(x+y)})}{4}\\<br>&amp;=\frac{(e^x-e^{-x})(e^y+e^{-y})+(e^x+e^{-x})(e^y-e^{-y})}{4}\\<br>&amp;=\sinh x\cosh y+\cosh x\sinh y.<br>\end{aligned}$<di><br>其他的公式可以使用以上两组公式简单推导得到$,$ 这里不再列举$.$</p>
+<h3 id="4-反双曲函数"><a href="#4-反双曲函数" class="headerlink" title="4. 反双曲函数"></a>4. 反双曲函数</h3><p>这类函数用得实在不多$,$ 也没什么特别的$,$ 故只列出表达式$.$</p>
+<ul>
+<li>$y=\operatorname{arsinh}x=\ln\left(x+\sqrt{x^2+1}\right),$ 定义域和值域都为 $\mathbb{R}.$</li>
+<li>$y=\operatorname{arcosh}x=\ln\left(x+\sqrt{x^2-1}\right),$ 定义域为 $[1,+\infty),$ 原函数是偶函数$,$ 所以反函数舍弃了部分值域$,$ 值域为 $[0,+\infty).$</li>
+<li>$\displaystyle y=\operatorname{artanh}x=\frac{1}{2}\ln(\frac{1+x}{1-x}),$ 定义域为 $(-1,1),$ 值域为 $\mathbb{R}.$</li>
+</ul>
+<p>以反双曲正弦函数为例给出推导过程$:$<di><br>我们已经知道$,$ 设双曲线上一点 $(x,y),$ 与之对应的双曲角的值是 $\ln(x+y).$ 又 $x^2-y^2=1$ 且 $x&gt;0,$ 所以 $x=\sqrt{y^2+1}.$ 代入 $\ln(x+y),$ 即得反双曲正弦函数的表达式$.$</p>
+<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>这篇文章的内容是trivival的$,$ 旨在简单介绍双曲函数$,$ 如果你想了解更深刻的内容$,$ 请移步 <a href="gugugu">复域上的三角 (双曲) 函数</a>$.$<di><br>需要少量的复分析知识$.$</p>
 <p><del>不$,$ 你不需要任何知识$,$ 因为我咕了$!$</del></p>
 ]]></content>
       <categories>
@@ -50,9 +57,9 @@
 <h4 id="积化和差公式"><a href="#积化和差公式" class="headerlink" title="积化和差公式"></a>积化和差公式</h4><script type="math/tex; mode=display">\sin\alpha\sin\beta=-\frac{\cos(\alpha+\beta)-\cos(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\sin\alpha\cos\beta=\frac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\cos\alpha\sin\beta=\frac{\sin(\alpha+\beta)-\sin(\alpha-\beta)}{2}</script><script type="math/tex; mode=display">\cos\alpha\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}</script><h4 id="和差化积公式"><a href="#和差化积公式" class="headerlink" title="和差化积公式"></a>和差化积公式</h4><script type="math/tex; mode=display">\sin\alpha+\sin\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}</script><script type="math/tex; mode=display">\cos\alpha+\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}</script><p>上面两组公式看似复杂$,$ 其实非常好记$,$ 也较为常用$.$</p>
 <h3 id="2-反三角函数"><a href="#2-反三角函数" class="headerlink" title="2. 反三角函数"></a>2. 反三角函数</h3><p>显然反三角函数不是三角函数的反函数$.$ 具体地$,$ 反正弦函数是正弦函数在 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 上的反函数$,$ 反余弦函数是正弦函数在 $\displaystyle[0,\pi]$ 上的反函数$,$ 反正切函数是正切函数在 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 上的反函数$.$ 这里我们只研究这三类反三角函数$.$<di><br>下面列举一些反三角函数的性质$:$</p>
 <ul>
-<li>$f(x)=\arcsin x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right],$ 在定义域上单调递增$,$ 是奇函数$.$</li>
-<li>$f(x)=\arccos x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle[0,\pi],$ 在定义域上单调递减$,$ 点 $\displaystyle\left(0,\frac{\pi}{2}\right)$ 是其对称中心$.$</li>
-<li>$f(x)=\arctan x$ 的定义域是 $\mathbb{R},$ 值域是 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 在定义域上单调递增$,$ 是奇函数$.$</li>
+<li>$y=\arcsin x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right],$ 在定义域上单调递增$,$ 是奇函数$.$</li>
+<li>$y=\arccos x$ 的定义域是 $[-1,1],$ 值域是 $\displaystyle[0,\pi],$ 在定义域上单调递减$,$ 点 $\displaystyle\left(0,\frac{\pi}{2}\right)$ 是其对称中心$.$</li>
+<li>$y=\arctan x$ 的定义域是 $\mathbb{R},$ 值域是 $\displaystyle\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 在定义域上单调递增$,$ 是奇函数$.$</li>
 </ul>
 <h4 id="基本关系-1"><a href="#基本关系-1" class="headerlink" title="基本关系"></a>基本关系</h4><ul>
 <li><strong>反正弦</strong><script type="math/tex; mode=display">\begin {aligned}
@@ -127,7 +134,7 @@
 \displaystyle-\pi+\arctan\frac{2x}{1-x^2}\;\;\;\;(x<-1)\\
 \end{cases}</script>上面一堆公式确实容易用错$,$ 但是不确定的时候查查$,$ 用多了也就熟练了$.$</li>
 </ul>
-<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>这篇文章的内容是trivival的$,$ 旨在收录一些公式方便查阅$,$ 如果你想了解更深刻的内容$,$ 请移步 <a href="gugugu">复数与三角 (双曲) 函数</a>$.$<di><br>需要少量的复分析知识$.$</p>
+<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><p>这篇文章的内容是trivival的$,$ 旨在收录一些公式方便查阅$,$ 如果你想了解更深刻的内容$,$ 请移步 <a href="gugugu">复域上的三角 (双曲) 函数</a>$.$<di><br>需要少量的复分析知识$.$</p>
 <p><del>不$,$ 你不需要任何知识$,$ 因为我咕了$!$</del></p>
 ]]></content>
       <categories>
