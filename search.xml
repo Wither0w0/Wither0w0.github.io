@@ -4,7 +4,7 @@
     <title>数学分析(二): 数列极限</title>
     <url>/2020/03/25/analysis2/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多工具$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、求法等$.$<br><a id="more"></a></p>
-<h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><h4 id="有限极限"><a href="#有限极限" class="headerlink" title="有限极限"></a>有限极限</h4><h4 id="无穷极限"><a href="#无穷极限" class="headerlink" title="无穷极限"></a>无穷极限</h4><h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><h3 id="4-有关极限计算的定理"><a href="#4-有关极限计算的定理" class="headerlink" title="4. 有关极限计算的定理"></a>4. 有关极限计算的定理</h3><h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h3 id="6-极限的应用"><a href="#6-极限的应用" class="headerlink" title="6. 极限的应用"></a>6. 极限的应用</h3><h4 id="自然常数-textbf-e"><a href="#自然常数-textbf-e" class="headerlink" title="自然常数$\textbf{e}$"></a>自然常数$\textbf{e}$</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4>]]></content>
+<h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h4><h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><h3 id="4-有关极限计算的定理"><a href="#4-有关极限计算的定理" class="headerlink" title="4. 有关极限计算的定理"></a>4. 有关极限计算的定理</h3><h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h4 id="部分极限的两种定义"><a href="#部分极限的两种定义" class="headerlink" title="部分极限的两种定义"></a>部分极限的两种定义</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h4 id="部分极限的存在性"><a href="#部分极限的存在性" class="headerlink" title="部分极限的存在性"></a>部分极限的存在性</h4><h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -156,14 +156,14 @@
 <li>$\forall x,y\in\mathbb{R},\;x+y=y+x,\,x\cdot y=y\cdot x.$ (交换律)</li>
 <li>$\forall x,y,z\in\mathbb{R},\;(x+y)\cdot z=x \cdot y+x\cdot z.$ (分配律)</li>
 <li>$\forall x\in\mathbb{R},\;x+0=x,\,x\cdot 1=x,$ 其中 $0,1\in\mathbb{R}.$ (单位元律)</li>
-<li>$\forall x\in\mathbb{R}\;\exists!-x\;s.t.\; x+(-x)=0\,,\forall x\in\mathbb{R}^*\;\exists!\;x^{-1}\;s.t.\;x\cdot(x^{-1})=1.$ (逆元律)</li>
+<li>$\forall x\in\mathbb{R}\;\exists!-x, x+(-x)=0\,,\forall x\in\mathbb{R}^*\;\exists!\;x^{-1}\;s.t.\;x\cdot(x^{-1})=1.$ (逆元律)</li>
 </ul>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R},\; x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立$.$ (全序性)</li>
 <li>$\forall x,y,z\in\mathbb{R},$ 若 $x&lt; y\,\land\,y &lt; z, $ 则 $x&lt; z.$ (传递性)</li>
 <li>$\forall x,y,z\in\mathbb{R},$ 若 $x&lt; y,$ 则 $x+z&lt; y+z.$ $\forall x,y,z\in\mathbb{R},z&gt; 0,$ 若 $x&lt; y,$ 则 $x z&lt;y z.$</li>
 </ul>
-<h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>若 $X,Y\subset\mathbb{R}$ 且 $\forall x\in X\leq\forall y\in Y,$ 则 $\exists z\in\mathbb{R}\;s.t.\;\forall x\in X\leq z\leq\forall y\in Y.$</p>
+<h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>若 $X,Y\subset\mathbb{R}$ 且 $\forall x\in X\leq\forall y\in Y,$ 则 $\exists z\in\mathbb{R},\forall x\in X\leq z\leq\forall y\in Y.$</p>
 <p>上述三组公理确定了实数域是所谓的$“$完备阿基米德有序域$”,$ 而且我们已经知道这样的数域如果存在$,$ 就是唯一的 (在同构意义下)$.$<di><br>于是我们还需要证明存在这样一个数域$,$ 那么最简单的方法就是从更低的结构和公理出发构造一个数域$,$ 并证明它具有实数域的一切性质$.$</p>
 <h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ ( $\forall x,y\in\mathbb{Q},$ 若 $x&lt;y,$ 则 $\exists z\in\mathbb{Q}\;s.t.\;x&lt;z&lt;y.$)</p>
 <p>若把有理数域拆分成集合 $A$ 和 $A’,$ 满足 $A\cup A’=\mathbb{Q},$ 且 $\forall a\in A&lt;\forall a’\in A’,$ 则称这样的拆分为有理数域的分划, 记作 $A|A’,$ 其中 $A$ 是分划的下组$, A’$ 是分划的上组$.$</p>
@@ -181,7 +181,7 @@
 <h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性(戴德金定理)"></a>完备性(戴德金定理)</h4><p>定义实数域的分划$,$ 记作 $\textbf{A}|\textbf{A}’,$ 分划的具体定义可仿照有理数域$.$<di><br><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’,$ 要么 $\textbf{A}$ 中有最大数$,$ 要么 $\textbf{A}’$ 中有最小数$.$<di><br>这便是戴德金定理$,$ 它刻画了实数的完备性$,$ 与实数公理中的完备性公理基本等价$.$</p>
 <p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A,$ 其他一切有理数属于$A’,$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
 <h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集 $X$ 的上界$,$ 且此时集 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集 $X$ 的下界$,$ 且此时集 $X$ 是下有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
-<p><strong>定理</strong>&#8194; 若集合 $X$ 有界$,$ 则它必有确界$.$<di><br>确界原理与实数的完备性也是等价的$,$ 这里我们直接使用戴德金定理简单证明$.$</p>
+<p><strong>定理</strong>&#8194; 若集合 $X$ 有界$,$ 则它必有确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里我们直接使用戴德金定理简单证明$.$</p>
 <p><strong>证明</strong>&#8194; 这里只讨论 $X$ 上有界时的情形$.$<di><br>$1^\circ\; X$ 中有最大数$;$<di><br>则显然这最大数是 $X$ 的上确界$.$<di><br>$2^\circ\; X$ 中没有最大数$.$<di><br>考虑实数域的分划 $\textbf{A}|\textbf{A}’,$ 其中 $\textbf{A}’$ 包含一切 $X$ 的上界$, \textbf{A}$ 包含其它一切数$.$<di><br>由于 $X$ 中没有最大数$, \textbf{A}$ 中也没有最大数$,$ 则 $\textbf{A}’$ 中必有最小数$,$ 这数即 $X$ 的上确界$.$</p>
 <h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将根据有理数的运算定义实数的运算$,$ 并说明运算的性质$.$</p>
 <h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R},$ 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}.$ </p>
@@ -192,13 +192,13 @@
 <p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,n\in\mathbb{N}_+,$ 则 $\sqrt[n]{\alpha}=\alpha^{\frac{1}{n}}=\sup\{\beta\in\mathbb{R}_+\,|\,\beta^n&lt;\alpha\}.$<di><br>然后便可以定义正实数的一切有理数次幂$,$ 并得到幂的运算性质$.$</p>
 <p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R},$ 则 $\alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}.$<di></p>
 <p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0\neq$ 且 $\alpha\neq1,$ 若 $\alpha^\beta=\gamma,$ 称 $\log_\alpha\gamma=\beta.$<di><br>注意这里对数的存在性和唯一性仍待证明$,$ 但即使不使用函数的观点$,$ 证明也是容易的$.$</p>
-<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$<di><br>然后取 $\displaystyle c_n=\frac{m_n}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于任意的 $\displaystyle n,$ 有</p>
+<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$ 由实数域的完备性可以导出它的阿基米德性$,$ 所以 $C_0$ 是存在的$.$<di><br>然后取 $\displaystyle c_n=\frac{m_n}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于一切 $\displaystyle n,$ 有 (显然不等式的最右边与最左边的差可以小于任意的 $\epsilon&gt;0.$)</p>
 <script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i,</script><p>则称记号</p>
 <script type="math/tex; mode=display">C_0.c_1c_2\cdots c_n\cdots</script><p>是实数 $\alpha$ 的十进制小数表示$.$</p>
-<p>因为可以用有理数唯一地逼近实数$,$ 所以每一个十进制小数表示对应唯一的实数$.$但是反过来并不一定$,$ 也就是说一种实数可能有多种十进制小数表示$.$<di></p>
+<p>由实数域的完备性$,$ 我们直接得出$:$ 无论是怎样的实数的表示$,$ 都存在相应的实数与之对应$.$<di><br>另一方面$,\mathbb{Q}$ 在 $\mathbb{R}$ 上是稠密的$,$ 因此对于每一种实数的表示只存在唯一的实数与之对应$.$ 这样我们说明了实数的表示可以唯一确定一个实数$.$<di><br>反过来$,$ 每个实数必存在十进制小数表示 (还是依稠密性)$,$ 但这十进制小数表示并不一定是唯一的$.$</p>
 <p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式</p>
 <script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
-<p>注意到如果一个实数是有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ 否则它只有一种十进制小数表示$.$</p>
+<p>注意到如果一个实数是 (非零的) 有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ (所以按此法定义实数的表示之后$,0.999\cdots=1.000\cdots$ 是一个平凡的结论$.$) 否则它只有一种十进制小数表示$.$</p>
 ]]></content>
       <categories>
         <category>数学</category>
