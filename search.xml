@@ -4,7 +4,50 @@
     <title>数学分析(二): 数列极限</title>
     <url>/2020/03/25/analysis2/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多工具$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、求法等$.$<br><a id="more"></a></p>
-<h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h4><h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><h3 id="4-有关极限计算的定理"><a href="#4-有关极限计算的定理" class="headerlink" title="4. 有关极限计算的定理"></a>4. 有关极限计算的定理</h3><h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h4 id="部分极限的两种定义"><a href="#部分极限的两种定义" class="headerlink" title="部分极限的两种定义"></a>部分极限的两种定义</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h4 id="部分极限的存在性"><a href="#部分极限的存在性" class="headerlink" title="部分极限的存在性"></a>部分极限的存在性</h4><h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4>]]></content>
+<h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><p><strong>定义</strong>&#8194; 给定无穷数列 $\{x_n\},$ 记 $x_n\to a$ 当且仅当 $\forall\epsilon&gt;0\,\exists N, \forall n&gt;N\Rightarrow|x_n-a|&lt;\epsilon.$<di><br>如果 $x_n\to a,$ 称 $a$ 是 $\{x_n\}$ 的极限$,$ 或 $\{x_n\}$ 是收敛数列 (且收敛于 $a$)$.$<di> </p>
+<h4 id="无穷小-大-量"><a href="#无穷小-大-量" class="headerlink" title="无穷小(大)量"></a>无穷小(大)量</h4><p><strong>定义</strong>&#8194; $\{x_n\}$ 是无穷小量$,$ 当且仅当 $\forall\epsilon&gt;0\,\exists N,\forall n&gt;N\Rightarrow|x_n|&lt;\epsilon.$<di><br>$\{x_n\}$ 是无穷大量$,$ 当且仅当 $\forall E&gt;0\,\exists N,\forall n&gt;N\Rightarrow|x_n|&gt;E.$</p>
+<p>可见无穷大 (小) 量并不是一个数字$.$<di><br>此外$,$ 容易证明$,$ 如果数列与一常数 $a$ 的差是无穷小量$,$ 那么该数列的极限是 $a.$ 所以也可以先定义无穷小量$,$ 然后得到极限的等价定义$.$<di><br>还有$,$ 对非零的无穷小量取倒数$,$ 即得无穷大量$.$</p>
+<h4 id="广义极限"><a href="#广义极限" class="headerlink" title="广义极限"></a>广义极限</h4><p><strong>定义</strong>&#8194; 记 $x_n\to+\infty$ 当且仅当 $\{x_n\}$ 是无穷大量$,$ 且存在 $N$ 使得对于一切的 $n&gt;N,x_n$ 恒正$.$ $x_n\to-\infty$ 的情形简单推广即可$.$<di><br>如果 $\{x_n\}$ 趋于无穷极限$,$ 称 $\{x_n\}$ 不收敛$,$ 广义上可认为此时极限存在$,$ 狭义上极限不存在$.$</p>
+<h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a,$ 对于任意 $p &lt; a$ (或 $ q &gt;a$)$,$ 存在 $N$ 使得对于一切的 $n&gt;N,$ 有 $x_n&gt;p$ (或 $x_n<q$)$.$<di><br>特别地$,p=0$ (或 $q=0$) 时极限的这一性质也称为极限的保号性$.$</p>
+<p>直接应用定义并结合实数域的稠密性即可证明$.$</p>
+<h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a$ 且 $x_n\to b,$ 有 $a=b.$<di><br>由于极限具有这一性质$,$ 记号 $x_n\to a$ 也可表示为 $\lim\limits_{x\to\infty}x_n=a.$ 且常略写为 $\lim x_n=a.$<di></p>
+<p><strong>证明</strong>&#8194; 假设 $x_n\to a$ 且 $x_n\to b,$ 而 $a\neq b.$<di><br>不妨设 $a<r<b,$ 则存在 $N',N'',$ 使得对于 $n>N'$ 有 $x_n>r,$ 对于 $n&gt;N’’$ 有 $x_n<r.$<di><br>取 $N=\max\{N’,N’’\},$ 则对于 $n&gt;N,x_n&gt;r$ 和 $x_n&lt;r$ 同时成立$,$ 而这是不可能的$.$ 极限的唯一性得证$.$ </p>
+<p>此定理对无穷极限的情形也成立$.$</p>
+<h4 id="有界性"><a href="#有界性" class="headerlink" title="有界性"></a>有界性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a,$ 则 $|x_n|\leq M.$</p>
+<p><strong>证明</strong>&#8194; 由极限的定义$,$ 取 $\epsilon&gt;0,$ 有 $N$ 使得对于一切的 $n&gt;N,|x_n-a|&lt;\epsilon$ 成立$.$<di><br>则 $n&gt;N$ 时数列的无穷项有上界$:|x_n|&lt;|a|+\epsilon,$ 设上界为 $M’.$<di><br>重新考虑前 $N$ 项$,$ 易得 $M=\max\{x_1,x_2,\cdots,<br>x_N,M’\}.$ </p>
+<h4 id="无穷小量的性质"><a href="#无穷小量的性质" class="headerlink" title="无穷小量的性质"></a>无穷小量的性质</h4><p><strong>定理</strong>&#8194; 有限个无穷小量的和是无穷小量$.$</p>
+<p><strong>证明</strong>&#8194; 这里只给出两个无穷小量的和的情形的证明$,$ 一般情形可以归纳地得出$.$<di><br>设 $\{x_n\},\{y_n\}$ 是无穷小量$,$ 由定义$,$ 对任意的 $\epsilon&gt;0,$ 存在 $N’,N’’$ 使得对于 $n&gt;N’$ 有 $|x_n|&lt;\epsilon,$ 对于 $n&gt;N’’$ 有 $|y_n|&lt;\epsilon.$<di><br>取 $N=\max\{N’,N’’\},$ 则对于 $n&gt;N,|x_n+y_n|\leq|x_n|+|y_n|<2\epsilon.$<di><br>再取 $\epsilon’=2\epsilon,$ 即得 $x_n+y_n$ 是无穷小量$.$</p>
+<p><strong>定理</strong>&#8194; 有限个无穷小量的积是无穷小量$.$</p>
+<p><strong>定理</strong>&#8194; 有界变量与无穷小量的积是无穷小量$.$</p>
+<p>需要特别说明的是$,$ 无限个无穷小量的积可以是任意值$.$ 考虑以下的数列构成的序列$:$</p>
+<script type="math/tex; mode=display">1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,2^1,\frac{1}{3},\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,1,3^2,\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,1,1,4^3,\frac{1}{5}\cdots</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><p>这里的每一数列显然都是无穷小量$,$ 然而它们的乘积恒为 $1.$</p>
+<p>根据无穷小量与无穷大量的倒数关系$,$ 可以得出无穷大量的类似性质$.$ 此处从略$.$</p>
+<h4 id="对等式、不等式取极限"><a href="#对等式、不等式取极限" class="headerlink" title="对等式、不等式取极限"></a>对等式、不等式取极限</h4><p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n=y_n$ 恒成立$,$ 则 $\lim x_n=\lim y_n.$<br>这是极限唯一性的推论$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n\leq y_n$ 恒成立$,$ 则 $\lim x_n\leq\lim y_n.$<br>注意如果 $x_n&lt; y_n$ 恒成立$,$ 还是只能推出 $\lim x_n\leq\lim y_n.$ (考虑 $\displaystyle x_n=-\frac{1}{n}$ 以及 $\displaystyle y_n=\frac{1}{n}.$)</p>
+<p><strong>证明</strong>&#8194; 设 $\lim x_n=a,\lim y_n=b,$ 但 $a&gt;b.$ 仍可设 $a&gt;r&gt;b,$ 容易导出矛盾$.$ </p>
+<h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 则 $\lim x_n\pm y_n=a\pm b.$<br>如果 $y_n$ 是常数列且 $y_n=b,$ 就有 $\lim (x_n\pm b)=\lim x_n\pm b.$ 下同$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 则 $\lim x_ny_n=ab.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle \lim \frac{x_n}{y_n}=\frac{a}{b}.$<br>这里由极限的保号性$,$ 对于充分大的 $n,$ 分式 $\displaystyle\frac{x_n}{y_n}$ 恒有意义$.$</p>
+<p>上面三个运算性质的证明可采用无穷小量的性质$,$ 这里省略具体过程$.$</p>
+<p>以上的运算性质是对有限极限而言的$,$ 对于无穷极限$,$ 也有相似的性质$.$ 容易由无穷大量的性质推出$,$ 或用有限极限的运算性质反证得到$:$<br><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 则 $\lim x_n+ y_n=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质仍然成立$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 且 $b&gt;0,$ 则 $\lim x_ny_n=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质同样仍然成立$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 则 $\lim x_n-y_n=+\infty.$<br>这里 $y_n$ 只能趋于有限极限$,$ 下同$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle\lim \frac{x_n}{y_n}=+\infty.$</p>
+<h4 id="不定式"><a href="#不定式" class="headerlink" title="不定式"></a>不定式</h4><p>有些形如 $x_n-y_n,x_ny_n,\displaystyle\frac{x_n}{y_n}$ 的极限不能运用运算性质来计算$,$ 但这并不意味极限不存在 (当然也可能不存在)$.$ 我们将这样的表达式称为不定式$.$</p>
+<ul>
+<li>$\displaystyle\infty-\infty$ 型$:$ 若 $x_n\to+\infty,y_n\to+\infty,$ 记 $x_n-y_n$ 是 $\displaystyle\infty-\infty$ 型的不定式$.$</li>
+<li>$\displaystyle0\cdot\infty$ 型$:$ 若 $x_n\to 0,y_n\to\pm\infty,$ 记 $x_ny_n$ 是 $\displaystyle 0\cdot\infty$ 型的不定式$.$</li>
+<li>$\displaystyle\frac{\infty}{\infty}$ 型$:$ 若 $x_n\to\pm\infty,y_n\to\pm\infty,$ 记 $\displaystyle\frac{x_n}{y_n}$ 是 $\displaystyle\frac{\infty}{\infty}$ 型的不定式$.$</li>
+<li>$\displaystyle\frac{0}{0}$ 型$:$ 若 $x_n\to 0,y_n\to 0,$ 且对于充分大的 $n,y_n\neq 0,$ 记 $\displaystyle\frac{x_n}{y_n}$ 是 $\displaystyle\frac{0}{0}$ 型的不定式$.$</li>
+</ul>
+<h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><p>极限的存在性是十分值得研究的$,$ 因为有些时候我们并不关心极限的具体值$,$ 而且$,$ 极限存在对于求极限的值也有很大帮助$.$<br>按照定义很难证明极限存在$,$ 除非预先知道极限的值$.$ 所以我们将讨论不求极限的值$,$ 只证明存在性的方法$.$</p>
+<h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><p><strong>定理</strong>&#8194; 单调有界数列必有有限极限$.$<br>此定理是实数完备性的反映$.$</p>
+<p><strong>证明</strong>&#8194; 这里只讨论单调递增有上界的数列的情形$.$<di><br>假设 $\{x_n\}$ 有上界$,$ 依确界原理$,$ 记 $a=\sup\{x_n\},$ 下证 $x_n\to a.$<di><br>由上确界的定义$,x_n\leq a.$ 另一方面$,$ 对任意的 $\epsilon&gt;0,$ 存在 $N$ 使得 $x_N&gt;a-\epsilon.$ (如果不是这样$,$ 上确界将小于等于 $a-\epsilon,$ 矛盾$.$)<di><br>又 $\{x_n\}$ 单调递增$,$ 所以对于 $n&gt;N,$ 有不等式 $x_n\geq x_N &gt;a-\epsilon$ 成立$.$ 从而 $|x_n-a|&lt;\epsilon,$ 命题得证$.$</p>
+<p>对于无穷极限$,$ 容易推广得$:$ 单调无界数列必有无穷极限$.$</p>
+<h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><p>柯西收敛原理给出了数列极限存在性的一般判别法$.$</p>
+<p><strong>定理</strong>&#8194; 数列 $\{x_n\}$ 收敛$,$ 当且仅当对于任意的 $\epsilon&gt;0,$ 存在 $N,$ 使得 $n&gt;N$ 且 $m&gt;N$ 时$,$ 便有 $|x_n-x_m|&lt;\epsilon.$</p>
+<p><strong>证明</strong>&#8194; 先证明必要性$.$ 即 $wither$ 咕咕咕是现实的$,$ 是非常有必要的$.$</p>
+<h3 id="4-有关极限计算的定理"><a href="#4-有关极限计算的定理" class="headerlink" title="4. 有关极限计算的定理"></a>4. 有关极限计算的定理</h3><h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h4 id="部分极限的两种定义"><a href="#部分极限的两种定义" class="headerlink" title="部分极限的两种定义"></a>部分极限的两种定义</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h4 id="部分极限的存在性"><a href="#部分极限的存在性" class="headerlink" title="部分极限的存在性"></a>部分极限的存在性</h4><h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -150,22 +193,22 @@
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础之一$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R}\;\exists!x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
-<li>$\forall x,y\in\mathbb{R}\;\exists!x\cdot y\in\mathbb{R},$ 称 $x\cdot y$ 是 $x$ 与 $y$ 的积$.$</li>
-<li>$\forall x,y,z\in\mathbb{R},\;(x+y)+z=x+(y+z),\,(x\cdot y)\cdot z=x\cdot (y\cdot z).$ (结合律)</li>
+<li>$\forall x,y\in\mathbb{R}\exists!x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
+<li>$\forall x,y\in\mathbb{R}\exists!x\cdot y\in\mathbb{R},$ 称 $x\cdot y$ 是 $x$ 与 $y$ 的积$.$</li>
+<li>$\forall x,y,z\in\mathbb{R},(x+y)+z=x+(y+z),(x\cdot y)\cdot z=x\cdot (y\cdot z).$ (结合律)</li>
 <li>$\forall x,y\in\mathbb{R},\;x+y=y+x,\,x\cdot y=y\cdot x.$ (交换律)</li>
 <li>$\forall x,y,z\in\mathbb{R},\;(x+y)\cdot z=x \cdot y+x\cdot z.$ (分配律)</li>
 <li>$\forall x\in\mathbb{R},\;x+0=x,\,x\cdot 1=x,$ 其中 $0,1\in\mathbb{R}.$ (单位元律)</li>
-<li>$\forall x\in\mathbb{R}\;\exists!-x, x+(-x)=0\,,\forall x\in\mathbb{R}^*\;\exists!\;x^{-1}\;s.t.\;x\cdot(x^{-1})=1.$ (逆元律)</li>
+<li>$\forall x\in\mathbb{R}\;\exists!-x, x+(-x)=0\,,\forall x\in\mathbb{R}^*\exists!x^{-1},\;x\cdot(x^{-1})=1.$ (逆元律)</li>
 </ul>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R},\; x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立$.$ (全序性)</li>
-<li>$\forall x,y,z\in\mathbb{R},$ 若 $x&lt; y\,\land\,y &lt; z, $ 则 $x&lt; z.$ (传递性)</li>
-<li>$\forall x,y,z\in\mathbb{R},$ 若 $x&lt; y,$ 则 $x+z&lt; y+z.$ $\forall x,y,z\in\mathbb{R},z&gt; 0,$ 若 $x&lt; y,$ 则 $x z&lt;y z.$</li>
+<li>$\forall x,y,z\in\mathbb{R},x&lt; y\,\land\,y &lt; z\Rightarrow x&lt; z.$ (传递性)</li>
+<li>$\forall x,y,z\in\mathbb{R},x&lt; y\Rightarrow x+z&lt; y+z.$ $\forall x,y,z\in\mathbb{R},z&gt; 0,x&lt; y,\Rightarrow x\cdot z&lt;y\cdot z.$</li>
 </ul>
 <h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>若 $X,Y\subset\mathbb{R}$ 且 $\forall x\in X\leq\forall y\in Y,$ 则 $\exists z\in\mathbb{R},\forall x\in X\leq z\leq\forall y\in Y.$</p>
 <p>上述三组公理确定了实数域是所谓的$“$完备阿基米德有序域$”,$ 而且我们已经知道这样的数域如果存在$,$ 就是唯一的 (在同构意义下)$.$<di><br>于是我们还需要证明存在这样一个数域$,$ 那么最简单的方法就是从更低的结构和公理出发构造一个数域$,$ 并证明它具有实数域的一切性质$.$</p>
-<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ ( $\forall x,y\in\mathbb{Q},$ 若 $x&lt;y,$ 则 $\exists z\in\mathbb{Q}\;s.t.\;x&lt;z&lt;y.$)</p>
+<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ ( $\forall x,y\in\mathbb{Q},x&lt;y\Rightarrow \exists z\in\mathbb{Q}\;s.t.\;x&lt;z&lt;y.$)</p>
 <p>若把有理数域拆分成集合 $A$ 和 $A’,$ 满足 $A\cup A’=\mathbb{Q},$ 且 $\forall a\in A&lt;\forall a’\in A’,$ 则称这样的拆分为有理数域的分划, 记作 $A|A’,$ 其中 $A$ 是分划的下组$, A’$ 是分划的上组$.$</p>
 <p>接下来我们讨论 $A$ 和 $A’$ 中是否有最大 (小) 数$:$<di><br>$1^\circ\;A$ 中有最大数$,A’$ 中有最小数$;$<di><br>这一情形根据有理数的稠密性容易证明是不可能的$.$<di><br>$2^\circ\;A$ 中有最大数 $r,A’$ 中没有最小数$;$ (或是相反)<di><br>这一情形中$,\,r$ 称为分划 $A|A’$ 的界数$.$<di><br>$3^\circ\;A$ 中没有最大数$,A’$ 中没有最小数$.$<di><br>令 $A=\{a\in \mathbb{Q}\,|\,a<0\,\lor\,a^2<2\},\,A'=\{a'\in \mathbb{Q}\,|\,a>0\,\land\,a’^2&gt;2\},$ 通过有理数的稠密性可以证明 $A$ 中没有最大数$,\,A’$ 中没有最小数$,$ 且容易验证 $A|A’$ 满足分划的定义$,$ 所以这种情形是存在的$.$</p>
 <p>在情形 $3^\circ$ 下定义一数 $\alpha$ 为分划 $A|A’$ 的界数$,$ 并定义 $\alpha$ 大于 $A$ 中的一切数而小于 $A’$ 中的一切数$.$<br>所有这样的界数称为无理数$.$ 有理数和无理数总称为实数$.$</p>
