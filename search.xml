@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数学分析(六): 微分学中的重要定理</title>
+    <url>/2020/05/02/analysis6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析(五): 一元函数的导数与微分</title>
+    <url>/2020/05/02/analysis5/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析(四): 函数的连续性</title>
+    <url>/2020/05/02/analysis4/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析(三): 函数极限</title>
+    <url>/2020/05/01/analysis3/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析: 数学分析基础(习题(一))</title>
+    <url>/2020/05/01/analysis(exercise)1/</url>
+    <content><![CDATA[<p>关于实数性质、$\epsilon-\delta$ 语言以及数学分析中其他基本问题的习题$.$<br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>习题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析: 递推数列的极限(习题(二))</title>
+    <url>/2020/05/01/analysis(exercise)2/</url>
+    <content><![CDATA[<p>关于递推数列极限存在性或求法的习题$.$<br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>习题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析(二): 数列极限</title>
     <url>/2020/03/25/analysis2/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多工具$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、求法等$.$<br><a id="more"></a></p>
@@ -10,7 +80,7 @@
 <h4 id="广义极限"><a href="#广义极限" class="headerlink" title="广义极限"></a>广义极限</h4><p><strong>定义</strong>&#8194; 记 $x_n\to+\infty$ 当且仅当 $\{x_n\}$ 是无穷大量$,$ 且存在 $N$ 使得对于一切的 $n&gt;N,x_n$ 恒正$.$ $x_n\to-\infty$ 的情形简单推广即可$.$<di><br>如果 $\{x_n\}$ 趋于无穷极限$,$ 称 $\{x_n\}$ 不收敛$,$ 广义上可认为此时极限存在$.$</p>
 <h3 id="2-极限的性质"><a href="#2-极限的性质" class="headerlink" title="2. 极限的性质"></a>2. 极限的性质</h3><h4 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a,$ 对于任意 $p &lt; a$ (或 $ q &gt;a$)$,$ 存在 $N$ 使得对于一切的 $n&gt;N,$ 有 $x_n&gt;p$ (或 $x_n&lt; q $)$ . $<di><br>特别地$,p=0$ (或 $q=0$) 时极限的这一性质也称为极限的保号性$.$</p>
 <p>直接应用定义并结合实数域的稠密性即可证明$.$</p>
-<h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a$ 且 $x_n\to b,$ 有 $a=b.$<di><br>由于极限具有这一性质$,$ 记号 $x_n\to a$ 也可表示为 $\lim\limits_{x\to\infty}x_n=a.$ 且常略写为 $\lim x_n=a.$<di></p>
+<h4 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a$ 且 $x_n\to b,$ 有 $a=b.$<di><br>由于极限具有这一性质$,$ 记号 $x_n\to a$ 也可表示为 $\lim\limits_{n\to\infty}x_n=a.$</p>
 <p><strong>证明</strong>&#8194; 假设 $x_n\to a$ 且 $x_n\to b,$ 而 $a\neq b.$<di><br>不妨设 $a&lt; r &lt; b,$ 则存在 $N’,N&#39;&#39;,$ 使得对于 $n&gt;N’$ 有 $x_n&gt;r,$ 对于 $n&gt;N&#39;&#39;$ 有 $x_n&lt; r.$<di><br>取 $N=\max\{N’,N&#39;&#39;\},$ 则对于 $n&gt;N,x_n&gt;r$ 和 $x_n&lt; r$ 同时成立$,$ 而这是不可能的$.$ 极限的唯一性得证$.$ </p>
 <p>此定理对无穷极限的情形也成立$.$</p>
 <h4 id="有界性"><a href="#有界性" class="headerlink" title="有界性"></a>有界性</h4><p><strong>定理</strong>&#8194; 若 $x_n\to a,$ 则 $|x_n|\leq M.$</p>
@@ -22,19 +92,19 @@
 <p>需要特别说明的是$,$ 无限个无穷小量的积可以是任意值$.$ 考虑以下的数列构成的序列$:$</p>
 <script type="math/tex; mode=display">1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,2^1,\frac{1}{3},\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,1,3^2,\frac{1}{4},\frac{1}{5}\cdots</script><script type="math/tex; mode=display">1,1,1,4^3,\frac{1}{5}\cdots</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><p>这里的每一数列显然都是无穷小量$,$ 然而它们的乘积恒为 $1.$</p>
 <p>根据无穷小量与无穷大量的倒数关系$,$ 可以得出无穷大量的类似性质$.$ 此处从略$.$</p>
-<h4 id="对等式、不等式取极限"><a href="#对等式、不等式取极限" class="headerlink" title="对等式、不等式取极限"></a>对等式、不等式取极限</h4><p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n=y_n$ 恒成立$,$ 则 $\lim x_n=\lim y_n.$<di><br>这是极限唯一性的推论$.$</p>
-<p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n\leq y_n$ 恒成立$,$ 则 $\lim x_n\leq\lim y_n.$<br>注意如果 $x_n&lt; y_n$ 恒成立$,$ 还是只能推出 $\lim x_n\leq\lim y_n.$ (考虑 $\displaystyle x_n=-\frac{1}{n}$ 以及 $\displaystyle y_n=\frac{1}{n}.$)</p>
-<p><strong>证明</strong>&#8194; 设 $\lim x_n=a,\lim y_n=b,$ 但 $a&gt;b.$ 仍设 $a&gt;r&gt;b,$ 便可导出矛盾$.$ </p>
+<h4 id="对等式、不等式取极限"><a href="#对等式、不等式取极限" class="headerlink" title="对等式、不等式取极限"></a>对等式、不等式取极限</h4><p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n=y_n$ 恒成立$,$ 则 $\lim\limits_{n\to\infty} x_n=\lim\limits_{n\to\infty} y_n.$<di><br>这是极限唯一性的推论$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\{x_n\},\{y_n\}$ 存在有限极限且 $x_n\leq y_n$ 恒成立$,$ 则 $\lim\limits_{n\to\infty} x_n\leq\lim\limits_{n\to\infty} y_n.$<br>注意如果 $x_n&lt; y_n$ 恒成立$,$ 还是只能推出 $\lim x_n\leq\lim y_n.$ (考虑 $\displaystyle x_n=-\frac{1}{n}$ 以及 $\displaystyle y_n=\frac{1}{n}.$)</p>
+<p><strong>证明</strong>&#8194; 设 $\lim\limits_{n\to\infty} x_n=a,\lim\limits_{n\to\infty} y_n=b,$ 但 $a&gt;b.$ 仍设 $a&gt;r&gt;b,$ 便可导出矛盾$.$ </p>
 <p>这些定理容易推广到无穷极限的情形$.$</p>
-<h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 则 $\lim (x_n\pm y_n)=a\pm b.$<br>如果 $y_n$ 是常数列且 $y_n=b,$ 就有 $\lim (x_n\pm b)=\lim x_n\pm b.$ 下同$.$</p>
-<p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 则 $\lim x_ny_n=ab.$</p>
-<p><strong>定理</strong>&#8194; 若 $\lim x_n=a,\lim y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle \lim \frac{x_n}{y_n}=\frac{a}{b}.$<br>这里由极限的保号性$,$ 对于充分大的 $n,$ 分式 $\displaystyle\frac{x_n}{y_n}$ 恒有意义$.$</p>
+<h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><p><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=a,\lim\limits_{n\to\infty} y_n=b,$ 则 $\lim\limits_{n\to\infty} (x_n\pm y_n)=a\pm b.$<br>如果 $y_n$ 是常数列且 $y_n=b,$ 就有 $\lim\limits_{n\to\infty} (x_n\pm b)=\lim\limits_{n\to\infty} x_n\pm b.$ 下同$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=a,\lim\limits_{n\to\infty} y_n=b,$ 则 $\lim\limits_{n\to\infty} x_ny_n=ab.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=a,\lim\limits_{n\to\infty} y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle \lim\limits_{n\to\infty} \frac{x_n}{y_n}=\frac{a}{b}.$<br>这里由极限的保号性$,$ 对于充分大的 $n,$ 分式 $\displaystyle\frac{x_n}{y_n}$ 恒有意义$.$</p>
 <p>上面三个运算性质的证明可采用无穷小量的性质$,$ 这里省略具体过程$.$</p>
-<p>以上的运算性质是对有限极限而言的$,$ 对于无穷极限$,$ 也有相似的性质$.$ 容易由无穷大量的性质推出$,$ 或用有限极限的运算性质反证得到$:$<di><br><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 则 $\lim (x_n+ y_n)=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质仍然成立$.$</p>
-<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 且 $b&gt;0,$ 则 $\lim x_ny_n=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质同样仍然成立$.$</p>
-<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 则 $\lim (x_n-y_n)=+\infty.$<br>这里 $y_n$ 只能趋于有限极限$,$ 下同$.$</p>
-<p><strong>定理</strong>&#8194; 若 $\lim x_n=+\infty,\lim y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle\lim \frac{x_n}{y_n}=+\infty.$</p>
-<h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><p><strong>定理</strong>&#8194; 若 $x_n\leq y_n\leq z_n$ 恒成立$,$ 且 $\lim x_n=\lim z_n=a,$ 则 $\lim y_n=a.$<br>由定义可直接证明$.$ 同样可以推广到无穷极限$.$</p>
+<p>以上的运算性质是对有限极限而言的$,$ 对于无穷极限$,$ 也有相似的性质$.$ 容易由无穷大量的性质推出$,$ 或用有限极限的运算性质反证得到$:$<di><br><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=+\infty,\lim \limits_{n\to\infty}y_n=b,$ 则 $\lim \limits_{n\to\infty}(x_n+ y_n)=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质仍然成立$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim \limits_{n\to\infty}x_n=+\infty,\lim\limits_{n\to\infty} y_n=b,$ 且 $b&gt;0,$ 则 $\lim\limits_{n\to\infty} x_ny_n=+\infty.$<br>如果 $y_n\to+\infty,$ 此性质同样仍然成立$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=+\infty,\lim\limits_{n\to\infty} y_n=b,$ 则 $\lim \limits_{n\to\infty}(x_n-y_n)=+\infty.$<br>这里 $y_n$ 只能趋于有限极限$,$ 下同$.$</p>
+<p><strong>定理</strong>&#8194; 若 $\lim\limits_{n\to\infty} x_n=+\infty,\lim \limits_{n\to\infty}y_n=b,$ 且 $b\neq 0,$ 则 $\displaystyle\lim\limits_{n\to\infty} \frac{x_n}{y_n}=+\infty.$</p>
+<h4 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h4><p><strong>定理</strong>&#8194; 若 $x_n\leq y_n\leq z_n$ 恒成立$,$ 且 $\lim \limits_{n\to\infty}x_n=\lim \limits_{n\to\infty}z_n=a,$ 则 $\lim\limits_{n\to\infty} y_n=a.$<br>由定义可直接证明$.$ 同样可以推广到无穷极限$.$</p>
 <h4 id="不定式"><a href="#不定式" class="headerlink" title="不定式"></a>不定式</h4><p>有些形如 $x_n-y_n,x_ny_n,\displaystyle\frac{x_n}{y_n}$ 的极限不能运用运算性质来计算$,$ 但这并不意味极限不存在 (当然也可能不存在)$.$ 我们将这样的表达式称为不定式$.$</p>
 <ul>
 <li>$\displaystyle\infty-\infty$ 型$:$ 若 $x_n\to+\infty,y_n\to+\infty,$ 记 $x_n-y_n$ 是 $\displaystyle\infty-\infty$ 型的不定式$.$</li>
@@ -43,23 +113,37 @@
 <li>$\displaystyle\frac{0}{0}$ 型$:$ 若 $x_n\to 0,y_n\to 0,$ 且对于一切充分大的 $n,y_n\neq 0,$ 记 $\displaystyle\frac{x_n}{y_n}$ 是 $\displaystyle\frac{0}{0}$ 型的不定式$.$</li>
 </ul>
 <h3 id="3-极限的存在性"><a href="#3-极限的存在性" class="headerlink" title="3. 极限的存在性"></a>3. 极限的存在性</h3><p>极限的存在性是十分值得研究的$,$ 因为有些时候我们并不关心极限的具体值$,$ 而且$,$ 极限存在这一条件对于求极限的值也有很大帮助$.$<di><br>按照定义很难证明极限存在$,$ 除非预先知道极限的值$.$ 所以我们将讨论不求极限的值$,$ 只证明存在性的方法$.$</p>
-<h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><p><strong>定理</strong>&#8194; 单调有界数列必有有限极限$.$<di><br>此定理是实数完备性的反映$.$</p>
+<h4 id="单调有界定理"><a href="#单调有界定理" class="headerlink" title="单调有界定理"></a>单调有界定理</h4><p><strong>定理</strong>&#8194; 单调有界数列必有有限极限$.$<di><br>注意这里的单调数列不必是严格单调的$.$</p>
 <p><strong>证明</strong>&#8194; 这里只讨论单调递增有上界的数列的情形$.$<di><br>因为 $\{x_n\}$ 有上界$,$ 依确界原理$,$ 记 $a=\sup\{x_n\},$ 下证 $x_n\to a:$<di><br>由上确界的定义$,x_n\leq a.$ 另一方面$,$ 对任意的 $\epsilon&gt;0,$ 存在 $N$ 使得 $x_N&gt;a-\epsilon.$ (如果不是这样$,$ 上确界将小于等于 $a-\epsilon,$ 矛盾$.$)<di><br>又 $\{x_n\}$ 单调递增$,$ 所以对于 $n&gt;N,$ 有不等式 $x_n\geq x_N &gt;a-\epsilon$ 成立$.$ 从而 $|x_n-a|&lt;\epsilon,$ 命题得证$.$</p>
 <p>对于无穷极限$,$ 容易推广得$:$ 单调无界数列必有无穷极限$.$</p>
 <h4 id="柯西收敛原理"><a href="#柯西收敛原理" class="headerlink" title="柯西收敛原理"></a>柯西收敛原理</h4><p>柯西收敛原理给出了数列极限存在性的一般判别法$.$ 它与单调有界定理都是实数完备性的等价命题$.$</p>
 <p><strong>定理</strong>&#8194; 数列 $\{x_n\}$ 收敛$,$ 当且仅当对于任意的 $\epsilon&gt;0,$ 存在 $N,$ 使得对于一切 $n,m&gt;N,$ 有 $|x_n-x_m|&lt;\epsilon.$</p>
-<p><strong>证明</strong>&#8194; 先证必要性$.$<di><br>设 $x_n\to a,$ 依极限的定义$,$ 任取 $\epsilon&gt;0,$ 存在 $N$ 使得对于一切 $n,m&gt;N$ 有 $|x_n-a|&lt;\epsilon$ 及 $|x_m-a|&lt;\epsilon.$<di><br>于是 $|x_n-x_m|=|(x_n-a)+(a-x_m)|\leq |x_n-a|+|x_m-a|\leq2\epsilon.$ 必要性证毕$.$<di><br>然后证充分性$.$<br>任取 $\epsilon&gt;0,$ 存在 $N,$ 使得对于一切 $n,m&gt;N,$ 有 $|x_n-x_m|&lt;\epsilon.$ 所以 $|x_n|&lt;|x_m|+\epsilon.$ 固定 $m$ 的值$,$ 易知 $n&gt;N$ 时数列 $\{x_n\}$ 有界$,$ 故 $\{x_n\}$ 是有界的$.$<di><br>设 $S=\{x|\exists N\forall n&gt;N,x&lt; x_n\}.$ 显然 $S$ 非空集而且也是有界的$,$ 设它的上确界为 $M.$<di><br>任取 $\epsilon&gt;0,$ 由上确界的性质容易得到 $(-\infty,M+\epsilon)\cap\{x_n\}$ 是无限集而 $(-\infty,M-\epsilon)\cap\{x_n\}$ 是有限集$.$<di><br>从而 $(M-\epsilon,M+\epsilon)\cap\{x_n\}$ 也是无限集$.$ 设 $x_{n_k}\in (M-\epsilon,M+\epsilon),k\in\mathbb{N}^*,$ 且 $\{n_k\}$ 是严格递增正整数数列$.$ 取 $n&gt;\max\{n_1,N\},$ 有 $|x_n-x_{n_k}|+|x_{n_k}-M|&lt;2\epsilon.$ 所以 $\lim x_n = M.$</p>
+<p><strong>证明</strong>&#8194; 先证必要性$.$<di><br>设 $x_n\to a,$ 依极限的定义$,$ 任取 $\epsilon&gt;0,$ 存在 $N$ 使得对于一切 $n,m&gt;N$ 有 $|x_n-a|&lt;\epsilon$ 及 $|x_m-a|&lt;\epsilon.$<di><br>于是 $|x_n-x_m|=|(x_n-a)+(a-x_m)|\leq |x_n-a|+|x_m-a|\leq2\epsilon.$ 必要性证毕$.$<di><br>然后证充分性$.$<br>任取 $\epsilon&gt;0,$ 存在 $N,$ 使得对于一切 $n,m&gt;N,$ 有 $|x_n-x_m|&lt;\epsilon.$ 所以 $|x_n|&lt;|x_m|+\epsilon.$ 固定 $m$ 的值$,$ 易知 $n&gt;N$ 时数列 $\{x_n\}$ 有界$,$ 故 $\{x_n\}$ 是有界的$.$<di><br>设 $S=\{x\,|\,\exists N\forall n&gt;N,x&lt; x_n\}.$ 显然 $S$ 非空集而且也是有界的$,$ 设它的上确界为 $M.$<di><br>任取 $\epsilon&gt;0,$ 由上确界的性质容易得到 $(-\infty,M+\epsilon)\cap\{x_n\}$ 是无限集而 $(-\infty,M-\epsilon)\cap\{x_n\}$ 是有限集$.$<di><br>从而 $(M-\epsilon,M+\epsilon)\cap\{x_n\}$ 也是无限集$.$ 设 $x_{n_k}\in (M-\epsilon,M+\epsilon),k\in\mathbb{N}^*,$ 且 $\{n_k\}$ 是严格递增正整数数列$.$ 取 $n&gt;\max\{n_1,N\},$ 有 $|x_n-x_{n_k}|+|x_{n_k}-M|&lt;2\epsilon.$ 所以 $\lim \limits_{n\to\infty}x_n = M.$</p>
 <p>充分性更自然的证法是使用致密性定理$,$ 本文中不作讨论$.$</p>
 <h3 id="4-数列极限的求法"><a href="#4-数列极限的求法" class="headerlink" title="4. 数列极限的求法"></a>4. 数列极限的求法</h3><p>求数列极限是一块庞大的问题$,$ 需要用到的知识和技巧是无穷尽的$.$ 这里只讨论一些特殊的数列极限的求法$,$ 较为一般的数列我们在函数极限中讨论$.$</p>
 <h4 id="递推数列"><a href="#递推数列" class="headerlink" title="递推数列"></a>递推数列</h4><p>许多递推数列不方便求出通项公式$,$ 但如果只需要求极限$,$ 一般的方法是先证极限存在$,$ 再在递推式两端取极限然后解方程$.$</p>
-<h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><p><strong>定理</strong>&#8194; 若 $\displaystyle\frac{x_n}{y_n}$ 是 $\displaystyle\frac{*}{\infty}$ 或 $\displaystyle\frac{0}{0}$ 型的不定式$,$ 且 $y_n$ 是严格单调数列$,$ 且 (广义) 极限 $\displaystyle\frac{x_n-x_{n-1}}{y_n-y_{n-1}}$ 存在$,$ 则 $\displaystyle\lim\frac{x_n}{y_n}=\lim\frac{x_n-x_{n-1}}{y_n-y_{n-1}}.$<di></p>
+<h4 id="Stolz定理"><a href="#Stolz定理" class="headerlink" title="Stolz定理"></a>Stolz定理</h4><p><strong>定理</strong>&#8194; 若 $\displaystyle\frac{x_n}{y_n}$ 是 $\displaystyle\frac{*}{\infty}$ 或 $\displaystyle\frac{0}{0}$ 型的不定式$,$ 且 $y_n$ 是严格单调数列$,$ 且 (广义) 极限 $\displaystyle\frac{x_n-x_{n-1}}{y_n-y_{n-1}}$ 存在$,$ 则 $\displaystyle\lim\limits_{n\to\infty}\frac{x_n}{y_n}=\lim\limits_{n\to\infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}.$<di></p>
 <p>Stolz定理可以认为是L&#39;Hospital法则的离散形式$.$</p>
-<p><strong>证明</strong>&#8194; 这里只对 $\displaystyle\frac{*}{\infty}$ 型不定式的情形给出证明$.$<di><br>设 $\displaystyle\lim\frac{x_n-x_{n-1}}{y_n-y_{n-1}}=l.$ 依极限的定义$,$ 任取 $\epsilon&gt;0,$ 存在 $N$ 使得对于一切的 $\displaystyle n&gt;N,\bigg|\frac{x_n-x_{n-1}}{y_n-y_{n-1}}-l\bigg|&lt;\epsilon$ 成立$.$<di><br>具体地$,$ 有 (因为数列 $\{y_n\}$ 是单调递增的)<di></p>
-<script type="math/tex; mode=display">(l-\epsilon)(y_{N+1}-y_N)< x_{N+1}-x_N< (l-\epsilon)(y_{N+1}-y_N),</script><script type="math/tex; mode=display">(l-\epsilon)(y_{N+2}-y_{N+1})< x_{N+2}-x_{N+1}< (l-\epsilon)(y_{N+2}-y_{N+1}),</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">(l-\epsilon)(y_n-y_{n-1})< x_n-x_{n-1}<(l-\epsilon)(y_n-y_{n-1}).</script><p>逐项相加$,$ 得 $\displaystyle \bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|&lt;\epsilon.$<di><br>因 $x_N,y_N$ 是定值$,$ 如果数列 $\{x_n\}$ 也是无界的$,$ 那么我们其实已经证明了 $\displaystyle \lim\frac{x_n}{y_n}=l.$ 至此 $\displaystyle\frac{\infty}{\infty}$ 型不定式的情形已经得到证明$.$<di><br>然而我们还可以得到更一般的结果$,$ 这样我们在应用Stolz定理时就不必考察数列 $\{x_n\}$ 是否有界$.$<di><br>我们关心的是 $\displaystyle\frac{x_n}{y_n}$ 的值$,$ 这里需要一些代数变形技巧$:$</p>
+<p><strong>证明</strong>&#8194; 这里只对 $\displaystyle\frac{*}{\infty}$ 型不定式的情形给出证明$.$<di><br>设 $\displaystyle\lim\limits_{n\to\infty}\frac{x_n-x_{n-1}}{y_n-y_{n-1}}=l.$ 依极限的定义$,$ 任取 $\epsilon&gt;0,$ 存在 $N$ 使得对于一切的 $\displaystyle n&gt;N,\bigg|\frac{x_n-x_{n-1}}{y_n-y_{n-1}}-l\bigg|&lt;\epsilon$ 成立$.$<di><br>具体地$,$ 有 (因为数列 $\{y_n\}$ 是单调递增的)<di></p>
+<script type="math/tex; mode=display">(l-\epsilon)(y_{N+1}-y_N)< x_{N+1}-x_N< (l-\epsilon)(y_{N+1}-y_N),</script><script type="math/tex; mode=display">(l-\epsilon)(y_{N+2}-y_{N+1})< x_{N+2}-x_{N+1}< (l-\epsilon)(y_{N+2}-y_{N+1}),</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">\cdot</script><script type="math/tex; mode=display">(l-\epsilon)(y_n-y_{n-1})< x_n-x_{n-1}<(l-\epsilon)(y_n-y_{n-1}).</script><p>逐项相加$,$ 得 $\displaystyle \bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|&lt;\epsilon.$<di><br>因 $x_N,y_N$ 是定值$,$ 如果数列 $\{x_n\}$ 也是无界的$,$ 那么我们其实已经证明了 $\displaystyle \lim\limits_{n\to\infty}\frac{x_n}{y_n}=l.$ 至此 $\displaystyle\frac{\infty}{\infty}$ 型不定式的情形已经得到证明$.$<di><br>然而我们还可以得到更一般的结果$,$ 这样我们在应用Stolz定理时就不必考察数列 $\{x_n\}$ 是否有界$.$<di><br>我们关心的是 $\displaystyle\frac{x_n}{y_n}$ 的值$,$ 这里需要一些代数变形技巧$:$</p>
 <script type="math/tex; mode=display">\frac{x_n}{y_n}-l\leq\frac{x_N-ly_N}{y_n}+\left(1-\frac{y_N}{y_n}\right)\left(\frac{x_n-x_N}{y_n-y_N}-l\right),</script><p>于是</p>
 <script type="math/tex; mode=display">\bigg|\frac{x_n}{y_n}-l\bigg|\leq\bigg|\frac{x
 _N-ly_N}{y_n}\bigg|+\bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|.</script><p>等式右边两项都为无穷小量$,$ Stolz定理证毕$.$</p>
-<h3 id="5-聚点和部分极限"><a href="#5-聚点和部分极限" class="headerlink" title="5. 聚点和部分极限"></a>5. 聚点和部分极限</h3><h4 id="部分极限的定义"><a href="#部分极限的定义" class="headerlink" title="部分极限的定义"></a>部分极限的定义</h4><h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><h4 id="部分极限的存在性"><a href="#部分极限的存在性" class="headerlink" title="部分极限的存在性"></a>部分极限的存在性</h4><h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4>]]></content>
+<h3 id="5-部分极限"><a href="#5-部分极限" class="headerlink" title="5. 部分极限"></a>5. 部分极限</h3><h4 id="部分极限的定义"><a href="#部分极限的定义" class="headerlink" title="部分极限的定义"></a>部分极限的定义</h4><p><strong>定义1</strong>&#8194; 若 $\{n_k\}$ 是严格递增正整数数列$,$ 称 $\lim\limits_{k\to\infty}x_{n_k}$ 是数列 $\{x_n\}$ 的部分极限$.$</p>
+<p><strong>定义2</strong>&#8194; 若对任意的 $\epsilon,$ 数列 $\{x_n\}$ 有无穷多项满足 $|x_n-a|&lt;\epsilon,$ 称 $a$ 是数列 $\{x_n\}$ 的部分极限$.$</p>
+<p>这两种定义完全等价$.$ 数列的部分极限有时也称为聚点$.$</p>
+<h4 id="闭区间套定理"><a href="#闭区间套定理" class="headerlink" title="闭区间套定理"></a>闭区间套定理</h4><p>闭区间套定理说明了可以使用无穷的闭区间唯一的$“$套出$”$一个实数$,$ 它与致密性定理也都是实数完备性的等价命题$.$</p>
+<p><strong>定理</strong>&#8194; 设 $\{[a_ n,b_ n]\}$ 是无穷区间序列$,[a_ 1,b_ 1]\supset[a_ 2,b_ 2]\supset\cdots\supset[a_ n,b_ n]\supset\cdots,$ (这样的无穷区间序列称为闭区间套) 且 $\lim\limits_{n\to\infty}b_n-a_n=0,$ 则存在唯一的实数 $c,$ 满足对于一切 $n$ 有 $c\in[a_ n,b_ n].$  </p>
+<p><strong>证明</strong>&#8194; 易知 $\{a_n\},\{b_n\}$ 都是单调有界数列$,$ 设它们分别收敛于 $a,b.$<di><br>因为 $\lim\limits_{n\to\infty}b_n-a_n=0,$ 所以 $a=b.$ $\{a_n\}$ 是单调递增的$,\{b_n\}$ 是单调递减的$,$ 有 $a_n\leq a\leq b\leq b_n.$<di><br>设 $c=a=b,$ 易知 $a_n\leq c\leq b_n$ 恒成立$,$ 所以这样的 $c$ 是存在的$.$<di><br>然后设 $d=c+\epsilon=b+\epsilon,\epsilon$ 是任一正数$,$ 但 $d&gt;\lim\limits_{n\to\infty}b_n,$ 由极限的性质$,$ 存在 $N,$ 对一切 $n&gt;N,$ 有 $d&gt;b_n,$ 所以 $d\notin[a_ n,b_ n].$ 类似地$,$ 也可设 $d=c-\epsilon.$ 综上$,$ 这样的 $c$ 是唯一存在的$.$</p>
+<h4 id="致密性定理"><a href="#致密性定理" class="headerlink" title="致密性定理"></a>致密性定理</h4><p><strong>定理</strong>&#8194; 一切有界数列都有部分极限$.$ (或者表述为$:$ 一切有界数列都有收敛子列$.$)</p>
+<p><strong>证明</strong>&#8194; 设数列 $\{x_n\}$ 的上界为 $M,$ 下界为 $N.$ 令 $a_1=N,b_1=M$ 将区间 $[N ,M]$ 从中间等分为两个区间$,$ 则至少存在一个区间$,$ 在它之中有数列 $\{x_n\}$ 的无限项$.$ 取这个区间为 $[a_ 2.b_ n]$<di><br>按此法$,$ 可以得到一系列有包含关系的闭区间 $[a_ n,b_ n],$ 且每一区间里都有数列 $\{x_n\}$ 中的无限项$.$ 而这些闭区间的长度为 $\displaystyle \frac{M-N}{2^{n-1}}\to 0,$ 所以 $\{[a_ n,b_ n]\}$ 构成一闭区间套$.$<di><br>设它确定的数为 $c,$ 显然 $c$ 满足数列部分极限的定义$.$</p>
+<p>可以推广到无界数列的情形$.$</p>
+<p>至此$,$ 实数的完备性等价定理几乎都出现过了$.$</p>
+<h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4><p><strong>定义1</strong>&#8194; 称数列的一切部分极限中的最大者为上极限$,$ 符号为 $\limsup\limits_{n\to\infty}$ 或 $\mathop{\overline{\lim}}\limits_{n\to\infty}.$<di><br>一切部分极限中的最大者为上极限$,$ 符号为 $\liminf\limits_{n\to\infty}$ 或 $\mathop{\underline{\lim}}\limits_{n\to\infty}.$</p>
+<p><strong>定义2</strong>&#8194; $\limsup\limits_{n\to\infty}x_n=\inf\limits_{n}\{\sup\limits_{k\leq n}\{x_k\}\}.$<di><br>$\limsup\limits_{n\to\infty}x_n=\sup\limits_{n}\{\inf\limits_{k\leq n}\{x_k\}\}.$<di></p>
+<p>还有更多等价定义$,$ 这里不作讨论$.$ 我们也不讨论上下极限的性质和运算等$,$ 因为如果可以熟练掌握分析的技巧和一些拓扑中的思想$,$ 这些将是平凡的$.$</p>
+<p><strong>定理</strong>&#8194; 数列存在 (普通意义的) 极限$,$ 当且仅当它的上下极限相等$.$<di><br>利用 $\limsup\limits_{n\to\infty}=\lim\limits_{k\to\infty}\sup\limits_{k\leq n}{x_k}$ 可证$.$</p>
+]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -202,7 +286,7 @@ _N-ly_N}{y_n}\bigg|+\bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|.</script><p>等式右�
   <entry>
     <title>数学分析(一): 实数理论</title>
     <url>/2020/03/18/analysis1/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R}\exists!\;x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
@@ -240,8 +324,8 @@ _N-ly_N}{y_n}\bigg|+\bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|.</script><p>等式右�
 <h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性 (戴德金定理)"></a>完备性 (戴德金定理)</h4><p>定义实数域的分划$,$ 记作 $\textbf{A}|\textbf{A}’,$ 分划的具体定义可仿照有理数域$.$<di><br><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’,$ 要么 $\textbf{A}$ 中有最大数$,$ 要么 $\textbf{A}’$ 中有最小数$.$<di><br>这便是戴德金定理$,$ 它刻画了实数的完备性$,$ 与实数公理中的完备性公理等价$.$</p>
 <p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A,$ 其他一切有理数属于$A’,$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
 <p>因为有理数域具有阿基米德性$,$ 实数域作为其完备化$,$ 不难证明这一性质仍然存在$.$</p>
-<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集 $X$ 的上界$,$ 且此时集 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集 $X$ 的下界$,$ 且此时集 $X$ 是下有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
-<p><strong>定理</strong>&#8194; 若集合 $X$ 有界$,$ 则它必有确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里直接使用戴德金定理简单证明$.$</p>
+<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集合 $X$ 的上界$,$ 且此时集合 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集合 $X$ 的下界$,$ 且此时集合 $X$ 是下有界的$.$ 若集合 $X$ 有上下界$,$ 称 $X$ 是有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
+<p><strong>定理</strong>&#8194; 若集合 $X$ 上 (下) 有界$,$ 则它必有上 (下) 确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里直接使用戴德金定理简单证明$.$</p>
 <p><strong>证明</strong>&#8194; 这里只讨论 $X$ 上有界时的情形$.$<di><br>$1^\circ\; X$ 中有最大数$;$<di><br>则显然这最大数是 $X$ 的上确界$.$<di><br>$2^\circ\; X$ 中没有最大数$.$<di><br>考虑实数域的分划 $\textbf{A}|\textbf{A}’,$ 其中 $\textbf{A}’$ 包含一切 $X$ 的上界$, \textbf{A}$ 包含其它一切数$.$<di><br>由于 $X$ 中没有最大数$, \textbf{A}$ 中也没有最大数$,$ 则 $\textbf{A}’$ 中必有最小数$,$ 这数即 $X$ 的上确界$.$</p>
 <h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将根据有理数的运算定义实数的运算$,$ 并说明运算的性质$.$</p>
 <h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R},$ 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}.$ </p>
@@ -259,7 +343,7 @@ _N-ly_N}{y_n}\bigg|+\bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|.</script><p>等式右�
 <p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式</p>
 <script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
 <p>注意到如果一个实数是 (非零的) 有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ (所以按此法定义实数的表示之后$,0.999\cdots=1.000\cdots$ 是一个平凡的结论$.$) 否则它只有一种十进制小数表示$.$</p>
-<p>关于无限小数的更多结论与运算$,$ 需要级数的知识$,$ 这里暂不涉及$.$</p>
+<p>关于无限小数的更多结论与运算$,$ 需要无穷级数的知识$,$ 这里暂不涉及$.$</p>
 ]]></content>
       <categories>
         <category>数学</category>

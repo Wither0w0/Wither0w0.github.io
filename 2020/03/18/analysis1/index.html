@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+  <meta name="description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学分析(一): 实数理论">
 <meta property="og:url" content="https://github.com/Wither0w0/Wither0w0.github.io/2020/03/18/analysis1/index.html">
 <meta property="og:site_name" content="Wither&#39;s Blog">
-<meta property="og:description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+<meta property="og:description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-18T07:32:54.000Z">
-<meta property="article:modified_time" content="2020-04-29T15:17:19.781Z">
+<meta property="article:modified_time" content="2020-05-01T14:00:15.608Z">
 <meta property="article:author" content="Wither">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -210,13 +210,6 @@
 
               <time title="创建时间：2020-03-18 15:32:54" itemprop="dateCreated datePublished" datetime="2020-03-18T15:32:54+08:00">2020-03-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-29 23:17:19" itemprop="dateModified" datetime="2020-04-29T23:17:19+08:00">2020-04-29</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -238,7 +231,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数啥也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较复杂, 如果真深入起来会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R}\exists!\;x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
@@ -276,8 +269,8 @@
 <h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性 (戴德金定理)"></a>完备性 (戴德金定理)</h4><p>定义实数域的分划$,$ 记作 $\textbf{A}|\textbf{A}’,$ 分划的具体定义可仿照有理数域$.$<di><br><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’,$ 要么 $\textbf{A}$ 中有最大数$,$ 要么 $\textbf{A}’$ 中有最小数$.$<di><br>这便是戴德金定理$,$ 它刻画了实数的完备性$,$ 与实数公理中的完备性公理等价$.$</p>
 <p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A,$ 其他一切有理数属于$A’,$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
 <p>因为有理数域具有阿基米德性$,$ 实数域作为其完备化$,$ 不难证明这一性质仍然存在$.$</p>
-<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集 $X$ 的上界$,$ 且此时集 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集 $X$ 的下界$,$ 且此时集 $X$ 是下有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
-<p><strong>定理</strong>&#8194; 若集合 $X$ 有界$,$ 则它必有确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里直接使用戴德金定理简单证明$.$</p>
+<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集合 $X$ 的上界$,$ 且此时集合 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集合 $X$ 的下界$,$ 且此时集合 $X$ 是下有界的$.$ 若集合 $X$ 有上下界$,$ 称 $X$ 是有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
+<p><strong>定理</strong>&#8194; 若集合 $X$ 上 (下) 有界$,$ 则它必有上 (下) 确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里直接使用戴德金定理简单证明$.$</p>
 <p><strong>证明</strong>&#8194; 这里只讨论 $X$ 上有界时的情形$.$<di><br>$1^\circ\; X$ 中有最大数$;$<di><br>则显然这最大数是 $X$ 的上确界$.$<di><br>$2^\circ\; X$ 中没有最大数$.$<di><br>考虑实数域的分划 $\textbf{A}|\textbf{A}’,$ 其中 $\textbf{A}’$ 包含一切 $X$ 的上界$, \textbf{A}$ 包含其它一切数$.$<di><br>由于 $X$ 中没有最大数$, \textbf{A}$ 中也没有最大数$,$ 则 $\textbf{A}’$ 中必有最小数$,$ 这数即 $X$ 的上确界$.$</p>
 <h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将根据有理数的运算定义实数的运算$,$ 并说明运算的性质$.$</p>
 <h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R},$ 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}.$ </p>
@@ -295,7 +288,7 @@
 <p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式</p>
 <script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
 <p>注意到如果一个实数是 (非零的) 有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ (所以按此法定义实数的表示之后$,0.999\cdots=1.000\cdots$ 是一个平凡的结论$.$) 否则它只有一种十进制小数表示$.$</p>
-<p>关于无限小数的更多结论与运算$,$ 需要级数的知识$,$ 这里暂不涉及$.$</p>
+<p>关于无限小数的更多结论与运算$,$ 需要无穷级数的知识$,$ 这里暂不涉及$.$</p>
 
     </div>
 
@@ -390,7 +383,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -401,7 +394,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
