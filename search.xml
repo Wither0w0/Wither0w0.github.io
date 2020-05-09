@@ -25,7 +25,8 @@
   <entry>
     <title>数学分析(四): 函数的连续性</title>
     <url>/2020/05/02/analysis4/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>直观上$,$ 函数的连续性说明了<br><a id="more"></a></p>
+]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -36,29 +37,17 @@
   <entry>
     <title>数学分析(三): 函数极限</title>
     <url>/2020/05/01/analysis3/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析: 数学分析基础(习题(一))</title>
-    <url>/2020/05/01/analysis(exercise)1/</url>
-    <content><![CDATA[<p>关于实数性质、$\epsilon-\delta$ 语言以及数学分析中其他基本问题的习题$.$<br><a id="more"></a></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>函数的极限是数学分析中最基本的概念$,$ 上一篇文章中我们已经介绍了数列极限的诸多性质$,$ 这些性质对函数极限而言也是类似的$.$<di><br>本文介绍函数极限的定义、若干重要极限和无穷小 (大) 的分阶等$.$<br><a id="more"></a></p>
 ]]></content>
       <categories>
         <category>数学</category>
       </categories>
       <tags>
         <tag>数学分析</tag>
-        <tag>习题</tag>
       </tags>
   </entry>
   <entry>
-    <title>数学分析: 递推数列的极限(习题(二))</title>
+    <title>数学分析(习题): 递推数列的极限</title>
     <url>/2020/05/01/analysis(exercise)2/</url>
     <content><![CDATA[<p>关于递推数列极限存在性或求法的习题$.$<br><a id="more"></a></p>
 ]]></content>
@@ -71,9 +60,22 @@
       </tags>
   </entry>
   <entry>
+    <title>数学分析(习题): 数学分析基础</title>
+    <url>/2020/05/01/analysis(exercise)1/</url>
+    <content><![CDATA[<p>关于实数性质、$\epsilon-\delta$ 语言以及数学分析中其他基本问题的习题$.$<br><a id="more"></a></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>习题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析(二): 数列极限</title>
     <url>/2020/03/25/analysis2/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多工具$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、求法等$.$<br><a id="more"></a></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>数列是一种特殊的函数$,$ 研究数列的极限可以为研究函数提供许多帮助$.$ 海涅定理也恰好印证了数列极限与函数极限的联系$.$ 对于初学者而言$,$ 学习数列极限的知识也有助于暂时绕开函数的复杂性质$,$ 从而更容易地建立对极限的正确直觉$.$<di><br>本文介绍数列极限的定义、性质、相关的实数完备性等价定理和部分极限等$.$<br><a id="more"></a></p>
 <h3 id="1-极限的定义"><a href="#1-极限的定义" class="headerlink" title="1. 极限的定义"></a>1. 极限的定义</h3><p><strong>定义</strong>&#8194; 给定无穷数列 $\{x_n\},$ 记 $x_n\to a$ 当且仅当 $\forall\epsilon&gt;0\exists N\forall n&gt;N\Rightarrow|x_n-a|&lt;\epsilon.$<di><br>如果 $x_n\to a,$ 称 $a$ 是 $\{x_n\}$ 的极限$,$ 或 $\{x_n\}$ 是收敛数列 (且收敛于 $a$)$.$<di> </p>
 <h4 id="无穷小-大-量"><a href="#无穷小-大-量" class="headerlink" title="无穷小(大)量"></a>无穷小(大)量</h4><p><strong>定义</strong>&#8194; $\{x_n\}$ 是无穷小量$,$ 当且仅当 $\forall\epsilon&gt;0\exists N\forall n&gt;N\Rightarrow|x_n|&lt;\epsilon.$<di><br>$\{x_n\}$ 是无穷大量$,$ 当且仅当 $\forall E&gt;0\exists N\forall n&gt;N\Rightarrow|x_n|&gt;E.$</p>
 <p>可见无穷大 (小) 量并不是一个数字$.$<di><br>此外$,$ 容易证明$,$ 如果数列与一常数 $a$ 的差是无穷小量$,$ 那么该数列的极限是 $a.$ 所以也可以先定义无穷小量$,$ 然后得到极限的等价定义$.$<di><br>还有$,$ 对非零的无穷小量取倒数$,$ 即得无穷大量$.$</p>
@@ -136,13 +138,13 @@ _N-ly_N}{y_n}\bigg|+\bigg|\frac{x_n-x_N}{y_n-y_N}-l\bigg|.</script><p>等式右�
 <p><strong>定理</strong>&#8194; 设 $\{[a_ n,b_ n]\}$ 是无穷区间序列$,[a_ 1,b_ 1]\supset[a_ 2,b_ 2]\supset\cdots\supset[a_ n,b_ n]\supset\cdots,$ (这样的无穷区间序列称为闭区间套) 且 $\lim\limits_{n\to\infty}b_n-a_n=0,$ 则存在唯一的实数 $c,$ 满足对于一切 $n$ 有 $c\in[a_ n,b_ n].$  </p>
 <p><strong>证明</strong>&#8194; 易知 $\{a_n\},\{b_n\}$ 都是单调有界数列$,$ 设它们分别收敛于 $a,b.$<di><br>因为 $\lim\limits_{n\to\infty}b_n-a_n=0,$ 所以 $a=b.$ $\{a_n\}$ 是单调递增的$,\{b_n\}$ 是单调递减的$,$ 有 $a_n\leq a\leq b\leq b_n.$<di><br>设 $c=a=b,$ 易知 $a_n\leq c\leq b_n$ 恒成立$,$ 所以这样的 $c$ 是存在的$.$<di><br>然后设 $d=c+\epsilon=b+\epsilon,\epsilon$ 是任一正数$,$ 但 $d&gt;\lim\limits_{n\to\infty}b_n,$ 由极限的性质$,$ 存在 $N,$ 对一切 $n&gt;N,$ 有 $d&gt;b_n,$ 所以 $d\notin[a_ n,b_ n].$ 类似地$,$ 也可设 $d=c-\epsilon.$ 综上$,$ 这样的 $c$ 是唯一存在的$.$</p>
 <h4 id="致密性定理"><a href="#致密性定理" class="headerlink" title="致密性定理"></a>致密性定理</h4><p><strong>定理</strong>&#8194; 一切有界数列都有部分极限$.$ (或者表述为$:$ 一切有界数列都有收敛子列$.$)</p>
-<p><strong>证明</strong>&#8194; 设数列 $\{x_n\}$ 的上界为 $M,$ 下界为 $N.$ 令 $a_1=N,b_1=M$ 将区间 $[N ,M]$ 从中间等分为两个区间$,$ 则至少存在一个区间$,$ 在它之中有数列 $\{x_n\}$ 的无限项$.$ 取这个区间为 $[a_ 2.b_ n]$<di><br>按此法$,$ 可以得到一系列有包含关系的闭区间 $[a_ n,b_ n],$ 且每一区间里都有数列 $\{x_n\}$ 中的无限项$.$ 而这些闭区间的长度为 $\displaystyle \frac{M-N}{2^{n-1}}\to 0,$ 所以 $\{[a_ n,b_ n]\}$ 构成一闭区间套$.$<di><br>设它确定的数为 $c,$ 显然 $c$ 满足数列部分极限的定义$.$</p>
+<p><strong>证明</strong>&#8194; 设数列 $\{x_n\}$ 的上界为 $M,$ 下界为 $N.$ 令 $a_1=N,b_1=M$ 将区间 $[N ,M]$ 从中间等分为两个区间$,$ 则至少存在一个区间$,$ 在它之中有数列 $\{x_n\}$ 的无限项$.$ 取这个区间为 $[a_ 2,b_ 2]$<di><br>按此法$,$ 可以得到一系列有包含关系的闭区间 $[a_ n,b_ n],$ 且每一区间里都有数列 $\{x_n\}$ 中的无限项$.$ 而这些闭区间的长度为 $\displaystyle \frac{M-N}{2^{n-1}}\to 0,$ 所以 $\{[a_ n,b_ n]\}$ 构成一闭区间套$.$<di><br>设它确定的数为 $c,$ 显然 $c$ 满足数列部分极限的定义$.$</p>
 <p>可以推广到无界数列的情形$.$</p>
 <p>至此$,$ 实数的完备性等价定理几乎都出现过了$.$</p>
 <h4 id="上下极限"><a href="#上下极限" class="headerlink" title="上下极限"></a>上下极限</h4><p><strong>定义1</strong>&#8194; 称数列的一切部分极限中的最大者为上极限$,$ 符号为 $\limsup\limits_{n\to\infty}$ 或 $\mathop{\overline{\lim}}\limits_{n\to\infty}.$<di><br>一切部分极限中的最大者为上极限$,$ 符号为 $\liminf\limits_{n\to\infty}$ 或 $\mathop{\underline{\lim}}\limits_{n\to\infty}.$</p>
-<p><strong>定义2</strong>&#8194; $\limsup\limits_{n\to\infty}x_n=\inf\limits_{n}\{\sup\limits_{k\leq n}\{x_k\}\}.$<di><br>$\limsup\limits_{n\to\infty}x_n=\sup\limits_{n}\{\inf\limits_{k\leq n}\{x_k\}\}.$<di></p>
-<p>还有更多等价定义$,$ 这里不作讨论$.$ 我们也不讨论上下极限的性质和运算等$,$ 因为如果可以熟练掌握分析的技巧和一些拓扑中的思想$,$ 这些将是平凡的$.$</p>
-<p><strong>定理</strong>&#8194; 数列存在 (普通意义的) 极限$,$ 当且仅当它的上下极限相等$.$<di><br>利用 $\limsup\limits_{n\to\infty}=\lim\limits_{k\to\infty}\sup\limits_{k\leq n}{x_k}$ 可证$.$</p>
+<p><strong>定义2</strong>&#8194; $\limsup\limits_{n\to\infty}x_n=\inf\limits_{n}\{\sup\limits_{k&gt;n}\{x_k\}\}.$<di><br>$\limsup\limits_{n\to\infty}x_n=\sup\limits_{n}\{\inf\limits_{k&gt; n}\{x_k\}\}.$<di></p>
+<p>还有更多等价定义$,$ 这里不作讨论$.$ 我们也不讨论上下极限的性质和运算等$,$ 因为如果可以熟练掌握分析的技巧$,$ 这些将是平凡的$.$</p>
+<p><strong>定理</strong>&#8194; 数列存在 (普通意义的) 极限$,$ 当且仅当它的上下极限相等$.$<di><br>利用 $\limsup\limits_{n\to\infty}=\lim\limits_{k\to\infty}\sup\limits_{k&gt; n}{x_k}$ 可证$.$</p>
 ]]></content>
       <categories>
         <category>数学</category>
