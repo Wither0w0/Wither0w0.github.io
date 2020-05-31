@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+  <meta name="description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学分析(一): 实数理论">
 <meta property="og:url" content="https://github.com/Wither0w0/Wither0w0.github.io/2020/03/18/analysis1/index.html">
 <meta property="og:site_name" content="Wither&#39;s Blog">
-<meta property="og:description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+<meta property="og:description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-18T07:32:54.000Z">
-<meta property="article:modified_time" content="2020-05-03T15:15:47.952Z">
+<meta property="article:modified_time" content="2020-05-31T07:48:54.782Z">
 <meta property="article:author" content="Wither">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -231,36 +231,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数什么也干不了$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较底层且抽象, 如果深入起来还会涉及到拓扑和抽代的知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R}\exists!\;x+y\in\mathbb{R},$ 称 $x+y$ 是 $x$ 与 $y$ 的和$.$</li>
-<li>$\forall x,y\in\mathbb{R}\exists!\;x y\in\mathbb{R},$ 称 $x y$ 是 $x$ 与 $y$ 的积$.$</li>
-<li>$\forall x,y,z\in\mathbb{R},(x+y)+z=x+(y+z),(x y) z=x (y z).$ (结合律)</li>
-<li>$\forall x,y\in\mathbb{R},\;x+y=y+x,\,x y=y x.$ (交换律)</li>
-<li>$\forall x,y,z\in\mathbb{R},\;(x+y) z=x  y+x z.$ (分配律)</li>
-<li>$\forall x\in\mathbb{R},\;x+0=x,\,x\cdot1=x,$ 其中 $0,1\in\mathbb{R}.$ (单位元律)</li>
-<li>$\forall x\in\mathbb{R}\exists!-x, x+(-x)=0\,,\forall x\in\mathbb{R}^*\exists!x^{-1},\;x(x^{-1})=1.$ (逆元律)</li>
+<li>$\forall x,y\in\mathbb{R},x+y\in\mathbb{R}$ 称 $x+y$ 是 $x$ 与 $y$ 的和</li>
+<li>$\forall x,y\in\mathbb{R}(x y\in\mathbb{R})$ 称 $x y$ 是 $x$ 与 $y$ 的积</li>
+<li>$\forall x,y,z\in\mathbb{R}((x+y)+z=x+(y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((x y) z=x (y z))$ (结合律)</li>
+<li>$\forall x,y\in\mathbb{R}(x+y=y+x)$<di><br>$\forall x,y\in\mathbb{R} (xy=y x)$ (交换律)</li>
+<li>$\forall x,y,z\in\mathbb{R}((x+y) z=x  y+x z)$ (分配律)</li>
+<li>$\forall x\in\mathbb{R}(x+e_1=x)$<di><br>$\forall x\in\mathbb{R} (xe_2=x)$ 其中 $e_1=0,e_2=1,e_1,e_2\in\mathbb{R}$ (单位元律)</li>
+<li>$\forall x\in\mathbb{R}(x+(-x)=0)$<di><br>$\forall x\in\mathbb{R}^*(x(x^{-1})=1),$ 其中 $-x,x^{-1}\in\mathbb{R}$ (逆元律)</li>
 </ul>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R},\; x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立$.$ (全序性)</li>
-<li>$\forall x,y,z\in\mathbb{R},x&lt; y\,\land\,y &lt; z,\Rightarrow x&lt; z.$ (传递性)</li>
-<li>$\forall x,y,z\in\mathbb{R},x&lt; y\Rightarrow x+z&lt; y+z.$<br>$\forall x,y,z\in\mathbb{R},z&gt; 0\,\land\,x&lt; y,\Rightarrow x z&lt; y  z.$</li>
+<li>$\forall x,y\in\mathbb{R}, x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立 (全序性)</li>
+<li>$\forall x,y,z\in\mathbb{R}((x&lt; y\land y &lt; z)\Rightarrow x&lt; z)$ (传递性)</li>
+<li>$\forall x,y,z\in\mathbb{R}(x&lt; y\Rightarrow (x+z&lt; y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((z&gt; 0\land x&lt; y)\Rightarrow x z&lt; y  z)$ (与运算相容)</li>
 </ul>
-<h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>$\forall X,Y\subset\mathbb{R}(\forall x\in X\,\forall y\in Y\land x\leq y)\Rightarrow \exists z\in\mathbb{R},\forall x\in X\,\forall y\in Y,x\leq z\leq y.$</p>
+<h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>实数的完备性公理$:$<di> </p>
 <ul>
-<li>阿基米德性$:\forall x,y\in\mathbb{R}_+\exists a\in\mathbb{N},a x &gt; y.$</li>
+<li>$\forall X,Y (((X,Y \subset\mathbb{R}\land X,Y\neq \varnothing)\Rightarrow \forall x\in X\forall y\in Y(x\leq y))\Rightarrow \exists z\in\mathbb{R}\forall x\in X\forall y\in Y(x\leq z\leq y))$</li>
 </ul>
-<p>由阿基米德性可以得到一些不能只由稠密性 (或完备性) 得到的性质$,$ 比如对任意实数$,$ 恒有自然数比它大$.$ 有些代数结构并不满足阿基米德性$,$ 比如非标准分析中的超实数域$.$ </p>
-<p>阿基米德性是不同于完备性的性质$,$ 完备性一般用柯西列的方法定义$.$ 不过在实数中$,$ 一般把阿基米德性和完备性并称为连续性$,$ 但有时不区分完备性与连续性$.$ 由完备性公理不仅可以确定实数域的完备性$,$ 还可以确定阿基米德性$.$ </p>
+<p>阿基米德性$:$</p>
+<ul>
+<li>$\forall x,y\in\mathbb{R}_+\exists a\in\mathbb{N}(a x &gt; y)$</li>
+</ul>
+<p>由阿基米德性可以得到一些不能只由稠密性 (或完备性) 得到的性质$,$ 比如对任意实数$,$ 恒有自然数比它大$.$ 有些代数结构并不满足阿基米德性$,$ 有$“$无穷大$”$元素的结构就没有这一性质$.$<br>连续性是不同于完备性的性质$,$ 完备性一般用柯西列的方法定义$.$ 在实数中$,$ 把阿基米德性和完备性并称为连续性$.$ 由完备性公理不仅可以确定实数域的完备性$,$ 还可以确定阿基米德性$.$ </p>
 <p>上述三组公理确定了实数域是所谓的$“$完备阿基米德有序域$”,$ 而且我们已经知道这样的数域如果存在$,$ 就是唯一的 (在同构意义下)$.$<di><br>于是我们还需要证明存在这样一个数域$,$ 那么最简单的方法就是从更低的结构和公理出发构造一个数域$,$ 并证明它具有实数域的一切性质$.$</p>
-<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ ($\forall x,y\in\mathbb{Q},x&lt;y\Rightarrow \exists z\in\mathbb{Q},x&lt;z&lt;y.$)</p>
-<p>若把有理数域拆分成集合 $A$ 和 $A’,$ 满足 $A\cup A’=\mathbb{Q},$ 且 $\forall a\in A,\forall a’\in A’,$ 有 $\alpha&lt;\alpha’,$ 则称这样的拆分为有理数域的分划, 记作 $A|A’,$ 其中 $A$ 是分划的下组$, A’$ 是分划的上组$.$</p>
+<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ 即 $\forall x,y\in\mathbb{Q}(x&lt; y\Rightarrow \exists z\in\mathbb{Q}(x&lt; z&lt; y)).$</p>
+<p>把有理数集拆分成集合 $A$ 和 $A’,$ 满足 $A\cup A’=\mathbb{Q},A,A’$ 非空且 $A$ 中一切数小于 $A’$ 中一切数$,$ 称这样的拆分为有理数集的分划, 记作 $A|A’,$ 其中 $A$ 是分划的下组$, A’$ 是分划的上组$.$</p>
 <p>接下来我们讨论 $A$ 和 $A’$ 中是否有最大 (小) 数$:$<di><br>$1^\circ\;A$ 中有最大数$,A’$ 中有最小数$;$<di><br>这一情形根据有理数的稠密性容易证明是不可能的$.$<di><br>$2^\circ\;A$ 中有最大数 $r,A’$ 中没有最小数$;$ (或是相反)<di><br>这一情形中$,\,r$ 称为分划 $A|A’$ 的界数$.$<di><br>$3^\circ\;A$ 中没有最大数$,A’$ 中没有最小数$.$<di><br>令 $A=\{a\in \mathbb{Q}\,|\,a<0\,\lor\,a^2<2\},\,A'=\{a'\in \mathbb{Q}\,|\,a>0\,\land\,a’^2&gt;2\},$ 通过有理数的稠密性可以证明 $A$ 中没有最大数$,\,A’$ 中没有最小数$,$ 且容易验证 $A|A’$ 满足分划的定义 (不存在 $x^2=2$ 且 $x$ 是正有理数)$,$ 所以这种情形是存在的$.$</p>
 <p>在情形 $3^\circ$ 下定义一数 $\alpha$ 为分划 $A|A’$ 的界数$,$ 并定义 $\alpha$ 大于 $A$ 中的一切数而小于 $A’$ 中的一切数$.$<di><br>所有这样的界数称为无理数$.$ 有理数和无理数总称为实数$.$</p>
 <h3 id="3-实数域的序"><a href="#3-实数域的序" class="headerlink" title="3. 实数域的序"></a>3. 实数域的序</h3><p>有理数之间、有理数与无理数之间的大小关系已经有了定义$,$ 接下来定义无理数之间的大小关系$.$</p>
 <p><strong>定义</strong>&#8194; 设 $\alpha$ 是分划 $A|A’$ 的界数$, \,\beta$ 是分划 $B|B’$ 的界数$,  $ 且 $\alpha,\beta$ 是无理数$,$ 则 $\alpha&lt;\beta$ 当且仅当 $A\subset B, \,\alpha=\beta$ 当且仅当 $A=B,\,\alpha&gt;\beta$ 当且仅当 $A\supset B.$<di></p>
-<p>这样实数域的序便已经定义完毕$,$ 直接采用定义就可以证明这实数域的序满足实数公理$.$</p>
+<p>这样实数的序便已经定义完毕$,$ 直接采用定义就可以证明这实数的序满足实数公理$.$</p>
 <h3 id="4-实数域的性质"><a href="#4-实数域的性质" class="headerlink" title="4. 实数域的性质"></a>4. 实数域的性质</h3><h4 id="稠密性"><a href="#稠密性" class="headerlink" title="稠密性"></a>稠密性</h4><p>我们直接证明比实数域的稠密性更强的性质$,$ 即任意两个不相等的实数之间都存在有理数$.$ (即 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性)</p>
 <p><strong>证明</strong>&#8194; 设 $\alpha$ 是分划 $A|A’$ 的界数$, \,\beta$ 是分划 $B|B’$ 的界数$,$ 且 $\alpha&lt;\beta.$ 则必有 $A\subset B,$ 从而 $A’\cap B\neq\varnothing.$<di><br>由此$,$ 属于 $A’\cap B$ 的一切数便都在实数 $\alpha,\beta$ 之间$.$<di><br>这一定理蕴含实数域的稠密性$.$</p>
 <p>再证一上述定理的推论$:$ 若实数 $\alpha,\beta$ 在一切满足 $r’-r&gt;\epsilon$ ($\epsilon$是任意正实数) 的有理数 $r,r’$ 之间$,$ 则 $\alpha=\beta.$</p>
@@ -275,12 +278,12 @@
 <h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将根据有理数的运算定义实数的运算$,$ 并说明运算的性质$.$</p>
 <h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R},$ 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}.$ </p>
 <p>直接按照定义$,$ 便可以证明加法运算与实数公理中的具有相同性质$.$<di><br>这里略去相关的证明$.$</p>
-<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+,$ 则 $\alpha\beta=\sup\{a\cdot b\,|\,a,b\in\mathbb{Q}_+,\, a&lt;\alpha,\,b&lt;\beta\}.$<di><br>这里只定义了正实数的乘法$,$ 其他情形简单推广即可$.$</p>
+<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+,$ 则 $\alpha\beta=\sup\{a b\,|\,a,b\in\mathbb{Q}_+,\, a&lt;\alpha,\,b&lt;\beta\}.$<di><br>这里只定义了正实数的乘法$,$ 其他情形简单推广即可$.$</p>
 <p>也可以依定义验证乘法运算的相关性质$,$ 并最终得到我们构造的实数域满足域公理$.$<di></p>
-<h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R},n\in\mathbb{N}^*,$ 则 $\alpha^n=\begin{matrix}\underbrace{\alpha\alpha\cdots\alpha}\\n个\alpha\end{matrix}.$ 它的存在性和唯一性是显然的$.$</p>
-<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,n\in\mathbb{N}_+,$ 则 $\sqrt[n]{\alpha}=\alpha^{\frac{1}{n}}=\sup\{\beta\in\mathbb{R}_+\,|\,\beta^n&lt;\alpha\}.$<di><br>然后便可以定义正实数的一切有理数次幂$,$ 并得到幂的运算性质$.$</p>
-<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R},$ 则 $\alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}.$<di></p>
-<p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0\neq$ 且 $\alpha\neq1,$ 若 $\alpha^\beta=\gamma,$ 称 $\log_\alpha\gamma=\beta.$<di><br>注意这里对数的存在性和唯一性仍待证明$,$ 但即使不使用函数的观点$,$ 证明也是容易的$.$</p>
+<h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R},n\in\mathbb{N}^*,$  $\alpha^n=\begin{matrix}\underbrace{\alpha\alpha\cdots\alpha}\\n个\alpha\end{matrix}.$ 它的存在性和唯一性是显然的$.$</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,n\in\mathbb{N}_+,$  $\sqrt[n]{\alpha}=\alpha^{\frac{1}{n}}=\sup\{\beta\in\mathbb{R}_+\,|\,\beta^n&lt;\alpha\}.$<di><br>然后便可以定义正实数的一切有理数次幂$,$ 并得到幂的运算性质$.$</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R},$  $\alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}.$<di></p>
+<p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0$ 且 $\alpha\neq1,$ 若 $\alpha^\beta=\gamma,$ 称 $\log_\alpha\gamma=\beta.$<di><br>注意这里对数的存在性和唯一性仍待证明$,$ 但即使不使用函数的观点$,$ 证明也是容易的$.$</p>
 <h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$ 由实数域的阿基米德性$, C_0$ 是存在的$.$<di><br>然后取 $\displaystyle c_n=\frac{m}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于一切 $\displaystyle n,$ 有</p>
 <script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i,</script><p>则称记号</p>
 <script type="math/tex; mode=display">C_0.c_1c_2\cdots c_n\cdots</script><p>是实数 $\alpha$ 的十进制小数表示$.$</p>
