@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+  <meta name="description" content="前言实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学分析(一): 实数理论">
 <meta property="og:url" content="https://github.com/Wither0w0/Wither0w0.github.io/2020/03/18/analysis1/index.html">
 <meta property="og:site_name" content="Wither&#39;s Blog">
-<meta property="og:description" content="前言实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$">
+<meta property="og:description" content="前言实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-18T07:32:54.000Z">
-<meta property="article:modified_time" content="2020-05-31T07:48:54.782Z">
+<meta property="article:modified_time" content="2020-06-28T07:09:22.988Z">
 <meta property="article:author" content="Wither">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -231,8 +231,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础$,$ 毕竟取极限对有理数是不封闭的$,$ 没有实数就不可能有数学分析$.$ 实数的性质对分析学也有诸多帮助$.$<di><br>然而实数理论比较底层且抽象, 且会涉及抽象代数等知识$.$ 本文仅介绍实数公理及一种实数构造方法——戴德金分割$,$ 并简单讨论构造出来的实数的性质$.$<br><a id="more"></a></p>
-<h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义$,$ 刻画实数域的本质属性$.$ 事实上$,$ 构造实数的方法很多$,$ 但构造出来的实数域$,$ 可以证明它们只要满足实数公理$,$ 便是同构的$.$</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.<di><br>实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.<br><a id="more"></a></p>
+<h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义, 刻画实数域的本质属性. 事实上, 构造实数的方法很多, 但构造出来的实数域, 只要满足实数公理, 就是同构的.</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R},x+y\in\mathbb{R}$ 称 $x+y$ 是 $x$ 与 $y$ 的和</li>
 <li>$\forall x,y\in\mathbb{R}(x y\in\mathbb{R})$ 称 $x y$ 是 $x$ 与 $y$ 的积</li>
@@ -242,56 +242,75 @@
 <li>$\forall x\in\mathbb{R}(x+e_1=x)$<di><br>$\forall x\in\mathbb{R} (xe_2=x)$ 其中 $e_1=0,e_2=1,e_1,e_2\in\mathbb{R}$ (单位元律)</li>
 <li>$\forall x\in\mathbb{R}(x+(-x)=0)$<di><br>$\forall x\in\mathbb{R}^*(x(x^{-1})=1),$ 其中 $-x,x^{-1}\in\mathbb{R}$ (逆元律)</li>
 </ul>
+<p>域公理给出了两种运算, 保证了运算的封闭性, 并赋予了这两种运算良好的性质 (可逆、存在单位元).</p>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R}, x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立 (全序性)</li>
-<li>$\forall x,y,z\in\mathbb{R}((x&lt; y\land y &lt; z)\Rightarrow x&lt; z)$ (传递性)</li>
-<li>$\forall x,y,z\in\mathbb{R}(x&lt; y\Rightarrow (x+z&lt; y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((z&gt; 0\land x&lt; y)\Rightarrow x z&lt; y  z)$ (与运算相容)</li>
+<li>$\forall x,y\in\mathbb{R}, x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立<br>$\forall x,y,z\in\mathbb{R}((x&lt; y\land y &lt; z)\Rightarrow x&lt; z)$ (严格全序性)</li>
+<li>$\forall x,y,z\in\mathbb{R}(x&lt; y\Leftrightarrow (x+z&lt; y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((z&gt; 0\land x&lt; y)\Leftrightarrow x z&lt; y  z)$ (与运算相容)</li>
 </ul>
-<h4 id="完备性公理"><a href="#完备性公理" class="headerlink" title="完备性公理"></a>完备性公理</h4><p>实数的完备性公理$:$<di> </p>
+<p>序关系的重要性不言自明. 然后可以按照通常的方式定义 $\leq,\geq$.</p>
+<h4 id="连续性公理"><a href="#连续性公理" class="headerlink" title="连续性公理"></a>连续性公理</h4><p>实数的连续性公理:<di> </p>
 <ul>
-<li>$\forall X,Y (((X,Y \subset\mathbb{R}\land X,Y\neq \varnothing)\Rightarrow \forall x\in X\forall y\in Y(x\leq y))\Rightarrow \exists z\in\mathbb{R}\forall x\in X\forall y\in Y(x\leq z\leq y))$</li>
+<li>$\forall X,Y ((X,Y \subset\mathbb{R}\land X,Y\neq \varnothing\land \forall x\in X\forall y\in Y(x\leq y))\Rightarrow \exists z\in\mathbb{R}\forall x\in X\forall y\in Y(x\leq z\leq y))$</li>
 </ul>
-<p>阿基米德性$:$</p>
+<p>阿基米德性:</p>
 <ul>
 <li>$\forall x,y\in\mathbb{R}_+\exists a\in\mathbb{N}(a x &gt; y)$</li>
 </ul>
-<p>由阿基米德性可以得到一些不能只由稠密性 (或完备性) 得到的性质$,$ 比如对任意实数$,$ 恒有自然数比它大$.$ 有些代数结构并不满足阿基米德性$,$ 有$“$无穷大$”$元素的结构就没有这一性质$.$<br>连续性是不同于完备性的性质$,$ 完备性一般用柯西列的方法定义$.$ 在实数中$,$ 把阿基米德性和完备性并称为连续性$.$ 由完备性公理不仅可以确定实数域的完备性$,$ 还可以确定阿基米德性$.$ </p>
-<p>上述三组公理确定了实数域是所谓的$“$完备阿基米德有序域$”,$ 而且我们已经知道这样的数域如果存在$,$ 就是唯一的 (在同构意义下)$.$<di><br>于是我们还需要证明存在这样一个数域$,$ 那么最简单的方法就是从更低的结构和公理出发构造一个数域$,$ 并证明它具有实数域的一切性质$.$</p>
-<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质$,$ 有理数域与实数域唯一不同的一点便是有理数域不具有完备性$,$ 而只具有稠密性$.$ 即 $\forall x,y\in\mathbb{Q}(x&lt; y\Rightarrow \exists z\in\mathbb{Q}(x&lt; z&lt; y)).$</p>
-<p>把有理数集拆分成集合 $A$ 和 $A’,$ 满足 $A\cup A’=\mathbb{Q},A,A’$ 非空且 $A$ 中一切数小于 $A’$ 中一切数$,$ 称这样的拆分为有理数集的分划, 记作 $A|A’,$ 其中 $A$ 是分划的下组$, A’$ 是分划的上组$.$</p>
-<p>接下来我们讨论 $A$ 和 $A’$ 中是否有最大 (小) 数$:$<di><br>$1^\circ\;A$ 中有最大数$,A’$ 中有最小数$;$<di><br>这一情形根据有理数的稠密性容易证明是不可能的$.$<di><br>$2^\circ\;A$ 中有最大数 $r,A’$ 中没有最小数$;$ (或是相反)<di><br>这一情形中$,\,r$ 称为分划 $A|A’$ 的界数$.$<di><br>$3^\circ\;A$ 中没有最大数$,A’$ 中没有最小数$.$<di><br>令 $A=\{a\in \mathbb{Q}\,|\,a<0\,\lor\,a^2<2\},\,A'=\{a'\in \mathbb{Q}\,|\,a>0\,\land\,a’^2&gt;2\},$ 通过有理数的稠密性可以证明 $A$ 中没有最大数$,\,A’$ 中没有最小数$,$ 且容易验证 $A|A’$ 满足分划的定义 (不存在 $x^2=2$ 且 $x$ 是正有理数)$,$ 所以这种情形是存在的$.$</p>
-<p>在情形 $3^\circ$ 下定义一数 $\alpha$ 为分划 $A|A’$ 的界数$,$ 并定义 $\alpha$ 大于 $A$ 中的一切数而小于 $A’$ 中的一切数$.$<di><br>所有这样的界数称为无理数$.$ 有理数和无理数总称为实数$.$</p>
-<h3 id="3-实数域的序"><a href="#3-实数域的序" class="headerlink" title="3. 实数域的序"></a>3. 实数域的序</h3><p>有理数之间、有理数与无理数之间的大小关系已经有了定义$,$ 接下来定义无理数之间的大小关系$.$</p>
-<p><strong>定义</strong>&#8194; 设 $\alpha$ 是分划 $A|A’$ 的界数$, \,\beta$ 是分划 $B|B’$ 的界数$,  $ 且 $\alpha,\beta$ 是无理数$,$ 则 $\alpha&lt;\beta$ 当且仅当 $A\subset B, \,\alpha=\beta$ 当且仅当 $A=B,\,\alpha&gt;\beta$ 当且仅当 $A\supset B.$<di></p>
-<p>这样实数的序便已经定义完毕$,$ 直接采用定义就可以证明这实数的序满足实数公理$.$</p>
-<h3 id="4-实数域的性质"><a href="#4-实数域的性质" class="headerlink" title="4. 实数域的性质"></a>4. 实数域的性质</h3><h4 id="稠密性"><a href="#稠密性" class="headerlink" title="稠密性"></a>稠密性</h4><p>我们直接证明比实数域的稠密性更强的性质$,$ 即任意两个不相等的实数之间都存在有理数$.$ (即 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性)</p>
-<p><strong>证明</strong>&#8194; 设 $\alpha$ 是分划 $A|A’$ 的界数$, \,\beta$ 是分划 $B|B’$ 的界数$,$ 且 $\alpha&lt;\beta.$ 则必有 $A\subset B,$ 从而 $A’\cap B\neq\varnothing.$<di><br>由此$,$ 属于 $A’\cap B$ 的一切数便都在实数 $\alpha,\beta$ 之间$.$<di><br>这一定理蕴含实数域的稠密性$.$</p>
-<p>再证一上述定理的推论$:$ 若实数 $\alpha,\beta$ 在一切满足 $r’-r&gt;\epsilon$ ($\epsilon$是任意正实数) 的有理数 $r,r’$ 之间$,$ 则 $\alpha=\beta.$</p>
-<p><strong>证明</strong>&#8194; 设 $\alpha&lt;\beta,$ 则依 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在两有理数 $t,t’$ 使得 $\alpha &lt; t &lt; t’&lt; \beta.$<di><br>那么 $r’-r&gt;t’-t,$ 这与 $r’-r&lt;\epsilon,\,\epsilon$ 为任意正实数矛盾$.$ 所以原命题得证$.$</p>
-<p>这一推论实际上表明了可以用有理数唯一地逼近实数$. $</p>
-<h4 id="完备性-戴德金定理"><a href="#完备性-戴德金定理" class="headerlink" title="完备性 (戴德金定理)"></a>完备性 (戴德金定理)</h4><p>定义实数域的分划$,$ 记作 $\textbf{A}|\textbf{A}’,$ 分划的具体定义可仿照有理数域$.$<di><br><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’,$ 要么 $\textbf{A}$ 中有最大数$,$ 要么 $\textbf{A}’$ 中有最小数$.$<di><br>这便是戴德金定理$,$ 它刻画了实数的完备性$,$ 与实数公理中的完备性公理等价$.$</p>
-<p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A,$ 其他一切有理数属于$A’,$ 显然 $A|A’$ 构成有理数域的分划$.$<di><br>设分划 $A|A’$ 的界数是 $\alpha,$ 下证$:$ $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数)$.$<di><br>若 $\alpha\in\textbf{A},$ 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数$,$ 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性$,$ 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta.$ 而 $r\in A,$ 这与 $A|A’$ 的界数是 $\alpha$ 矛盾$.$<di><br>对于 $\alpha$ 在上组的情形$,$ 同理$.$ 且由实数域的稠密性$,$ $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的$.$ 原命题得证$.$</p>
-<p>因为有理数域具有阿基米德性$,$ 实数域作为其完备化$,$ 不难证明这一性质仍然存在$.$</p>
-<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是无限集$,$ 若 $\forall x\in X\leq M,$ 称 $M$ 是集合 $X$ 的上界$,$ 且此时集合 $X$ 是上有界的$.$ 若 $\forall x\in X\geq m,$ 称 $m$ 是集合 $X$ 的下界$,$ 且此时集合 $X$ 是下有界的$.$ 若集合 $X$ 有上下界$,$ 称 $X$ 是有界的$.$<di><br>一切上界中的最小数称为上确界$,$ 记作 $\sup X,$ 一切下界中的最大数称为下确界$,$ 记作 $\inf X.$</p>
-<p><strong>定理</strong>&#8194; 若集合 $X$ 上 (下) 有界$,$ 则它必有上 (下) 确界$.$<di><br>确界原理与实数的完备性是等价的$,$ 这里直接使用戴德金定理简单证明$.$</p>
-<p><strong>证明</strong>&#8194; 这里只讨论 $X$ 上有界时的情形$.$<di><br>$1^\circ\; X$ 中有最大数$;$<di><br>则显然这最大数是 $X$ 的上确界$.$<di><br>$2^\circ\; X$ 中没有最大数$.$<di><br>考虑实数域的分划 $\textbf{A}|\textbf{A}’,$ 其中 $\textbf{A}’$ 包含一切 $X$ 的上界$, \textbf{A}$ 包含其它一切数$.$<di><br>由于 $X$ 中没有最大数$, \textbf{A}$ 中也没有最大数$,$ 则 $\textbf{A}’$ 中必有最小数$,$ 这数即 $X$ 的上确界$.$</p>
-<h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将根据有理数的运算定义实数的运算$,$ 并说明运算的性质$.$</p>
-<h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R},$ 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}.$ </p>
-<p>直接按照定义$,$ 便可以证明加法运算与实数公理中的具有相同性质$.$<di><br>这里略去相关的证明$.$</p>
-<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+,$ 则 $\alpha\beta=\sup\{a b\,|\,a,b\in\mathbb{Q}_+,\, a&lt;\alpha,\,b&lt;\beta\}.$<di><br>这里只定义了正实数的乘法$,$ 其他情形简单推广即可$.$</p>
-<p>也可以依定义验证乘法运算的相关性质$,$ 并最终得到我们构造的实数域满足域公理$.$<di></p>
-<h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R},n\in\mathbb{N}^*,$  $\alpha^n=\begin{matrix}\underbrace{\alpha\alpha\cdots\alpha}\\n个\alpha\end{matrix}.$ 它的存在性和唯一性是显然的$.$</p>
-<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,n\in\mathbb{N}_+,$  $\sqrt[n]{\alpha}=\alpha^{\frac{1}{n}}=\sup\{\beta\in\mathbb{R}_+\,|\,\beta^n&lt;\alpha\}.$<di><br>然后便可以定义正实数的一切有理数次幂$,$ 并得到幂的运算性质$.$</p>
-<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R},$  $\alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}.$<di></p>
-<p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0$ 且 $\alpha\neq1,$ 若 $\alpha^\beta=\gamma,$ 称 $\log_\alpha\gamma=\beta.$<di><br>注意这里对数的存在性和唯一性仍待证明$,$ 但即使不使用函数的观点$,$ 证明也是容易的$.$</p>
-<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha,$ 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1.$ 由实数域的阿基米德性$, C_0$ 是存在的$.$<di><br>然后取 $\displaystyle c_n=\frac{m}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于一切 $\displaystyle n,$ 有</p>
-<script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i,</script><p>则称记号</p>
-<script type="math/tex; mode=display">C_0.c_1c_2\cdots c_n\cdots</script><p>是实数 $\alpha$ 的十进制小数表示$.$</p>
-<p>由闭区间套定理 (实数完备性的等价定理$,$ 具体从略) 直接得到每一个实数的十进制表示是存在且唯一的$.$<br>反过来$,$ 每个实数必存在十进制小数表示 (还是因为有理数的稠密性)$,$ 但这十进制小数表示并不一定是唯一的$.$</p>
-<p><strong>定义</strong>&#8194; 如果存在 $N,$ 对于一切 $n&gt;N,$ 不等式</p>
-<script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号$,$ 称 $\alpha$ 是 (十进制) 有限小数$.$ 否则$,\alpha$ 是 (十进制) 无限小数$.$</p>
-<p>注意到如果一个实数是 (非零的) 有限小数$,$ 那么它必有两种十进制小数表示$,$ 一种是 $0$ 循环$,$ 一种是 $9$ 循环$.$ (所以按此法定义实数的表示之后$,0.999\cdots=1.000\cdots$ 是一个平凡的结论$.$) 否则它只有一种十进制小数表示$.$</p>
-<p>关于无限小数的更多结论与运算$,$ 需要无穷级数的知识$,$ 这里暂不涉及$.$</p>
+<p>阿基米德性表明, 对于每一实数, 恒有整数比它大. 反过来, 对于每一正实数, 恒有以一为分子、以自然数为分母的数比它小. 有“无穷大”的结构中不存在阿基米德性, 有界的结构也常是如此. </p>
+<p>连续性公理并不只给出了实数的完备性, 因为它蕴含了阿基米德性. 完备性作为度量空间的性质, 通过柯西列来定义, 完备的结构未必有阿基米德性. 完备性与阿基米德性合称连续性.<di><br>不过, 在只讨论实数域时, 常常不区分连续性和完备性.</p>
+<p>上述三组公理确定了实数域是所谓的“完备阿基米德有序域”, 而且我们已经知道这样的数域如果存在 (无矛盾), 就是唯一的 (在同构意义下).<di><br>于是我们还需要证明这样的一个数域存在, 那么最简单的方法就是从更低的结构和公理出发构造一个数域, 并证明它具有用实数公理定义的实数域的一切性质.</p>
+<h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质, 有理数域与实数域唯一不同的一点便是有理数域不具有完备性, 而只具有稠密性. 即 $\forall x,y\in\mathbb{Q}(x&lt; y\Rightarrow \exists z\in\mathbb{Q}(x&lt; z&lt; y))$.</p>
+<p><strong>定义</strong>&#8194; 把有理数域拆分成集合 $A$ 和 $A’$, 满足 $A\cup A’=\mathbb{Q}$, $A,A’$ 非空且 $A$ 中一切数小于 $A’$ 中一切数, 称这样的拆分为有理数域的分划, 记作 $A|A’$, 其中 $A$ 是分划的下组, $A’$ 是分划的上组.</p>
+<p>接下来我们讨论 $A$ 和 $A’$ 中是否有最大 (小) 数:<di><br>$1^\circ\;A$ 中有最大数, $A’$ 中有最小数;<di><br>这一情形根据有理数的稠密性容易证明是不可能的.<di><br>$2^\circ\;A$ 中有最大数 $r$, $A’$ 中没有最小数; (或是相反)<di><br>这一情形中$,\,r$ 称为分划 $A|A’$ 的界数.<di><br>$3^\circ\;A$ 中没有最大数,$A’$ 中没有最小数.<di><br>令 $A=\{a\in \mathbb{Q}\,|\,a<0\,\lor\,a^2<2\},\,A'=\{a'\in \mathbb{Q}\,|\,a'>0\,\land\,a'^2>2\}$, 通过有理数的稠密性可以证明 $A$ 中没有最大数, $A’$ 中没有最小数, 且容易验证 $A|A’$ 满足分划的定义 (不存在 $x^2=2$ 且 $x$ 是正有理数), 所以这种情形是存在的.</p>
+<p>在情形 $3^\circ$ 下定义一数 $\alpha$ 为分划 $A|A’$ 的界数, 并定义 $\alpha$ 大于 $A$ 中的一切数而小于 $A’$ 中的一切数.<di><br>定义所有这样的界数称为无理数. 有理数和无理数总称为实数.</p>
+<h3 id="3-实数域的序"><a href="#3-实数域的序" class="headerlink" title="3. 实数域的序"></a>3. 实数域的序</h3><p>有理数之间、有理数与无理数之间的大小关系已经有了定义, 接下来定义无理数之间的大小关系$.$</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha$ 是分划 $A|A’$ 的界数, $\beta$ 是分划 $B|B’$ 的界数, 且 $\alpha,\beta$ 是无理数, 则 $\alpha&lt;\beta$ 当且仅当 $A\subset B$. $\alpha=\beta$ 当且仅当 $A=B$. $\alpha&gt;\beta$ 当且仅当 $A\supset B$.<di></p>
+<p>这样实数的序便已经定义完毕, 直接采用定义, 结合戴德金分割就可以证明这实数的序满足 (严格) 全序性.</p>
+<h3 id="4-实数域的性质"><a href="#4-实数域的性质" class="headerlink" title="4. 实数域的性质"></a>4. 实数域的性质</h3><h4 id="稠密性"><a href="#稠密性" class="headerlink" title="稠密性"></a>稠密性</h4><p>为了得到实数域的连续性, 这里先证明两个关于稠密性的引理, 它们反映的是有理数域在实数域上的稠密性 (实数域的强稠密性).</p>
+<p><strong>引理1</strong>&#8194; 任意两个不相等的实数之间都存在有理数.</p>
+<p><strong>证明</strong>&#8194; 设 $\alpha,\beta$ 分别是分划 $A|A’,B|B’$ 的界数, 且 $\alpha&lt;\beta$, 则必有 $A\subset B$, 从而 $A’\cap B\neq\varnothing$.<di><br>由此, 属于 $A’\cap B$ 的一切数便都在实数 $\alpha,\beta$ 之间.</p>
+<p>这一引理蕴含实数域的稠密性. </p>
+<p>要在用实数公理定义的实数域中证明强稠密性, 使用阿基米德性质即可.</p>
+<p><strong>引理2</strong>&#8194; 若实数 $\alpha,\beta$ 在一切满足 $r’-r&lt;\epsilon$ ($\epsilon$是任意正实数) 的有理数 $r,r’$ 之间$,$ 则 $\alpha=\beta.$</p>
+<p><strong>证明</strong>&#8194; 设 $\alpha&lt;\beta$, 则由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性, 存在两有理数 $t,t’$ 使得 $\alpha &lt; t &lt; t’&lt; \beta$.<di><br>那么 $r’-r&gt;t’-t$, 这与 $r’-r&lt;\epsilon,\,\epsilon$ 为任意正实数矛盾. 所以原命题得证.</p>
+<p>这一引理实际上表明了可以用有理数唯一地逼近实数, 这为我们不引入极限而证明实数域的诸多性质提供了工具.</p>
+<h4 id="连续性-戴德金定理"><a href="#连续性-戴德金定理" class="headerlink" title="连续性 (戴德金定理)"></a>连续性 (戴德金定理)</h4><p>定义实数域的分划, 记作 $\textbf{A}|\textbf{A}’$, 分划的具体定义可仿照有理数域.<di></p>
+<p><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’$, 要么 $\textbf{A}$ 中有最大数, 要么 $\textbf{A}’$ 中有最小数.<di><br>这便是戴德金定理, 它刻画了实数的连续性, 与实数公理中的连续性公理等价.</p>
+<p><strong>证明</strong>&#8194; 记属于 $\textbf{A}$ 的一切有理数集合为 $A$ 其他一切有理数属于$A’$, 显然 $A|A’$ 构成有理数域的分划.<di><br>设分划 $A|A’$ 的界数是 $\alpha$, 下证: $\alpha$ 是 $\textbf{A}$ 中的最大数 (或 $\textbf{A}’$ 中的最小数).<di><br>若 $\alpha\in\textbf{A}$, 此时假设 $\alpha$ 不是 $\textbf{A}$ 中的最大数, 那么存在 $\beta&gt;\alpha$ 且 $\beta\in\textbf{A}.$<di><br>由引理1, 存在有理数 $r$ 满足 $\alpha &lt; r &lt; \beta$. 而 $r\in A$, 这与 $A|A’$ 的界数是 $\alpha$ 矛盾.<di><br>对于 $\alpha$ 在上组的情形, 同理易证. 且由实数域的稠密性, $\textbf{A}$ 中有最大数且同时 $\textbf{A}’$ 中有最小数是不可能的. 命题得证.</p>
+<h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是实数集, 若存在 $M$ 对一切 $x\in X$  成立 $x\leq M$, 则称 $M$ 是集合 $X$ 的上界, 且此时集合 $X$ 是上有界的.<di><br>若存在 $m$ 对一切 $x\in X$  成立 $x\geq m$, 则称 $m$ 是集合 $X$ 的下界, 且此时集合 $X$ 是上有界的. 若集合 $X$ 有上下界, 称 $X$ 是有界的.<di><br>一切上界中的最小数称为上确界, 记作 $\sup X$, 一切下界中的最大数称为下确界, 记作 $\inf X$.</p>
+<p><strong>定理</strong>&#8194; 若实数集 $X$ 上 (下) 有界, 则它必有上 (下) 确界.<di><br>确界原理与实数的连续性是等价的, 这里使用戴德金定理简单证明.</p>
+<p><strong>证明</strong>&#8194; 只讨论 $X$ 上有界时的情形.<di><br>$1^\circ\; X$ 中有最大数;<di><br>则显然这最大数是 $X$ 的上确界.<di><br>$2^\circ\; X$ 中没有最大数.<di><br>考虑集合 $\textbf{A},\textbf{A}’$, 其中 $\textbf{A}’$ 包含一切 $X$ 的上界, $\textbf{A}$ 包含其它一切实数. 易证 $\textbf{A}|\textbf{A}’$ 是实数域的分划.<di><br>因为 $X$ 中没有最大数, $\textbf{A}$ 中也没有最大数 (假设 $a$ 是 $\textbf{A}$ 的最大数, 那么存在 $x\in X$ 使得 $x&gt;a$, 而 $X$ 中没有最大数, 由实数域的稠密性, 一定存在 $a’&gt;a$ 使得 $x&gt;a’$. 根据 $\textbf{A}$ 的定义, $a’\in\textbf{A}$. 从而 $a$ 不是 $\textbf{A}$ 的最大数, 矛盾), 所以 $\textbf{A}’$ 中必有最小数, 这数即 $X$ 的上确界.</p>
+<p><strong>定义</strong>&#8194; 若实数集合 $X$ 上无界, 也记它的上界为 $+\infty$, 有 $\sup X=+\infty$. 下无界则记下界为 $-\infty$. 有 $\inf X=-\infty$.</p>
+<h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将基于有理数的运算定义实数的运算, 并说明运算的性质.</p>
+<h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}$, 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}$. </p>
+<p>以加法结合律为例给出运算性质的证明. 即对 $\alpha,\beta,\gamma\in\mathbb{R}$, 有 $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.</p>
+<p><strong>证明</strong>&#8194; 首先需要指出确界的重要性质: 任取 $\epsilon&gt;0$, 一方面对一切 $x\in X$, 成立 $x&lt;\sup X +\epsilon$, 另一方面, 存在 $x\in X$, 使得 $x&gt;\sup X -\epsilon$.<di><br>于是取 $a,b,c\in\mathbb{Q}$ 且 $a&lt;\alpha,b&lt;\beta,c&lt;\gamma$, 把加法的定义展开, 得到<di></p>
+<center> $(\alpha+\beta)+c-\epsilon<(\alpha+\beta)+\gamma< (\alpha+\beta)+c+\epsilon$. </center>
+
+<p>再作一步展开, </p>
+<center> $l_1 =(a+b)+c-2\epsilon< (\alpha+\beta)+\gamma< (a+b)+c+2\epsilon=r_1$. </center>
+
+<p>同理有 </p>
+<center> $l_2=a+(b+c)-2\epsilon< \alpha+ (\beta+\gamma)< a+(b+c)+2\epsilon=r_2$. </center>
+
+<p>由有理数的加法结合律, 易知 $l_1,r_1$ 与 $l_2,r_2$ 是同一界限, 且 $r-l=4\epsilon$, 依实数的阿基米德性, 这可为任意小.<di><br>按引理2, 这两界限间的数是唯一的, 即 $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.<di><br>实数的加法结合律得证. </p>
+<p>其他性质, 包括下文各运算性质的证明都是相似的.<di><br>事实上, 实数域的连续性保证了这些运算结果的存在性. 而 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性, 保证了用有理数来定义实数的运算是 “足够精确的”. 所以我们常可以使用引理2得到两个运算结果相等之类的结果, 不同的是想要得到 $r-l$ 为任意小可能需要一些不等式技巧. 我们不必关心具体的证明过程.<di></p>
+<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+$, 则 $\alpha\beta=\sup\{a b\,|\,a,b\in\mathbb{Q}_+,\, a&lt;\alpha,\,b&lt;\beta\}$.<di><br>这里只定义了正实数的乘法, 其他情形按符号法则简单推广.</p>
+<h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}$, $n\in\mathbb{N}^*$,  $\alpha^n=\begin{matrix}\underbrace{\alpha\alpha\cdots\alpha}\\n个\alpha\end{matrix}$. 它的存在性和唯一性是显然的.</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+,n\in\mathbb{N}_+$, 若 $a=\beta^n$, 称 $\beta=\alpha^\frac{1}{n}$ 或 $\sqrt[n ]{\alpha}$.<di><br>然后可以通常地定义正实数的一切有理数次幂, 并得到有理数次幂的运算性质.</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}_+,\beta\in\mathbb{R} $, 称 $ \alpha^\beta=\sup\{\alpha^b\,|\,b\in\mathbb{Q},b&lt;\beta\}$.<di><br>至此, 指数运算完全被推广到了实数上.</p>
+<p><strong>定义</strong>&#8194; 设 $\alpha,\beta,\gamma\in\mathbb{R},\alpha,\gamma&gt;0$ 且 $\alpha\neq1$, 若 $\alpha^\beta=\gamma$, 称 $\log_\alpha\gamma=\beta$.<di></p>
+<p>为了凸显开方与对数运算与其他运算的互逆关系, 这里采用的定义并不能很明显地看出开方和对数运算结果的存在性 (唯一性由单调易知). 以开方运算为例, 可以构造 $\xi=\sup\{b\in\mathbb{Q}_+\,|\,b^n&lt;\alpha\}$, 使用引理2证明 $\xi=\alpha^\frac{1}{n}$.</p>
+<h3 id="6-实数的表示"><a href="#6-实数的表示" class="headerlink" title="6. 实数的表示"></a>6. 实数的表示</h3><p>对于实数 $\alpha$, 取整数 $C_0$ 满足 $C_0\leq\alpha\leq C_0+1$. 由实数域的阿基米德性, $C_0$ 是存在的.<di><br>然后取 $\displaystyle c_n=\frac{m}{10^n}$ ($n,m\in\mathbb{N},n\geq 1,0\leq m\leq 9$)<di><br>且对于一切 $n$, 有</p>
+<center> $\displaystyle l=C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\sum\limits_{i=1}^{n}c_i+\frac{1}{10^n}=r$, </center>
+
+<p>则称记号</p>
+<script type="math/tex; mode=display">C_0.c_1c_2\cdots c_n\cdots</script><p>是实数 $\alpha$ 的十进制小数表示.</p>
+<p>因为一切 $l$ 都小于 $r$, 依实数的连续性, $\alpha$ 是存在的. 而又由 $r-l$ 可小于任意给定正数, 由引理2, $\alpha$ 是唯一的.<di><br>反过来, 每个实数必存在十进制小数表示, 但这十进制小数表示并不一定是唯一的.</p>
+<p><strong>定义</strong>&#8194; 如果存在 $N$, 对于一切 $n&gt;N$, 不等式</p>
+<script type="math/tex; mode=display">C_0+\sum\limits_{i=1}^{n}c_i\leq\alpha\leq C_0+\frac{1}{10^n}+\sum\limits_{i=1}^{n}c_i</script><p>都能成立等号, 称 $\alpha$ 是 (十进制) 有限小数. 否则, $\alpha$ 是 (十进制) 无限小数.</p>
+<p>注意到如果一个实数是 (非零的) 有限小数, 那么它必有两种十进制小数表示, 一种是 $0$ 循环$,$ 一种是 $9$ 循环. (所以按此法定义实数的表示之后, $0.999\cdots=1.000\cdots$ 是一个平凡的结论) 否则它只有一种十进制小数表示.</p>
+<p>无限小数的更多结论与运算, 需要无穷级数的知识, 这里暂不涉及.</p>
 
     </div>
 
@@ -373,7 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-实数公理"><span class="nav-text">1. 实数公理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#域公理"><span class="nav-text">域公理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序公理"><span class="nav-text">序公理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完备性公理"><span class="nav-text">完备性公理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-戴德金分割"><span class="nav-text">2. 戴德金分割</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从有理数构造实数"><span class="nav-text">从有理数构造实数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-实数域的序"><span class="nav-text">3. 实数域的序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实数域的性质"><span class="nav-text">4. 实数域的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#稠密性"><span class="nav-text">稠密性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完备性-戴德金定理"><span class="nav-text">完备性 (戴德金定理)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#确界原理"><span class="nav-text">确界原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-实数的运算"><span class="nav-text">5. 实数的运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加法"><span class="nav-text">加法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乘法"><span class="nav-text">乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#幂运算和对数"><span class="nav-text">幂运算和对数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-实数的表示"><span class="nav-text">6. 实数的表示</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-实数公理"><span class="nav-text">1. 实数公理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#域公理"><span class="nav-text">域公理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序公理"><span class="nav-text">序公理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连续性公理"><span class="nav-text">连续性公理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-戴德金分割"><span class="nav-text">2. 戴德金分割</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从有理数构造实数"><span class="nav-text">从有理数构造实数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-实数域的序"><span class="nav-text">3. 实数域的序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实数域的性质"><span class="nav-text">4. 实数域的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#稠密性"><span class="nav-text">稠密性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连续性-戴德金定理"><span class="nav-text">连续性 (戴德金定理)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#确界原理"><span class="nav-text">确界原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-实数的运算"><span class="nav-text">5. 实数的运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加法"><span class="nav-text">加法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乘法"><span class="nav-text">乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#幂运算和对数"><span class="nav-text">幂运算和对数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-实数的表示"><span class="nav-text">6. 实数的表示</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
