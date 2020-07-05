@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-18T07:32:54.000Z">
-<meta property="article:modified_time" content="2020-06-28T07:09:22.988Z">
+<meta property="article:modified_time" content="2020-07-05T15:16:01.178Z">
 <meta property="article:author" content="Wither">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -242,19 +242,17 @@
 <li>$\forall x\in\mathbb{R}(x+e_1=x)$<di><br>$\forall x\in\mathbb{R} (xe_2=x)$ 其中 $e_1=0,e_2=1,e_1,e_2\in\mathbb{R}$ (单位元律)</li>
 <li>$\forall x\in\mathbb{R}(x+(-x)=0)$<di><br>$\forall x\in\mathbb{R}^*(x(x^{-1})=1),$ 其中 $-x,x^{-1}\in\mathbb{R}$ (逆元律)</li>
 </ul>
-<p>域公理给出了两种运算, 保证了运算的封闭性, 并赋予了这两种运算良好的性质 (可逆、存在单位元).</p>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
 <li>$\forall x,y\in\mathbb{R}, x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立<br>$\forall x,y,z\in\mathbb{R}((x&lt; y\land y &lt; z)\Rightarrow x&lt; z)$ (严格全序性)</li>
 <li>$\forall x,y,z\in\mathbb{R}(x&lt; y\Leftrightarrow (x+z&lt; y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((z&gt; 0\land x&lt; y)\Leftrightarrow x z&lt; y  z)$ (与运算相容)</li>
 </ul>
-<p>序关系的重要性不言自明. 然后可以按照通常的方式定义 $\leq,\geq$.</p>
 <h4 id="连续性公理"><a href="#连续性公理" class="headerlink" title="连续性公理"></a>连续性公理</h4><p>实数的连续性公理:<di> </p>
 <ul>
 <li>$\forall X,Y ((X,Y \subset\mathbb{R}\land X,Y\neq \varnothing\land \forall x\in X\forall y\in Y(x\leq y))\Rightarrow \exists z\in\mathbb{R}\forall x\in X\forall y\in Y(x\leq z\leq y))$</li>
 </ul>
 <p>阿基米德性:</p>
 <ul>
-<li>$\forall x,y\in\mathbb{R}_+\exists a\in\mathbb{N}(a x &gt; y)$</li>
+<li>$\forall x\in\mathbb{R}_+\exists a\in\mathbb{N}(a &gt; x)$</li>
 </ul>
 <p>阿基米德性表明, 对于每一实数, 恒有整数比它大. 反过来, 对于每一正实数, 恒有以一为分子、以自然数为分母的数比它小. 有“无穷大”的结构中不存在阿基米德性, 有界的结构也常是如此. </p>
 <p>连续性公理并不只给出了实数的完备性, 因为它蕴含了阿基米德性. 完备性作为度量空间的性质, 通过柯西列来定义, 完备的结构未必有阿基米德性. 完备性与阿基米德性合称连续性.<di><br>不过, 在只讨论实数域时, 常常不区分连续性和完备性.</p>
@@ -271,8 +269,8 @@
 <p><strong>证明</strong>&#8194; 设 $\alpha,\beta$ 分别是分划 $A|A’,B|B’$ 的界数, 且 $\alpha&lt;\beta$, 则必有 $A\subset B$, 从而 $A’\cap B\neq\varnothing$.<di><br>由此, 属于 $A’\cap B$ 的一切数便都在实数 $\alpha,\beta$ 之间.</p>
 <p>这一引理蕴含实数域的稠密性. </p>
 <p>要在用实数公理定义的实数域中证明强稠密性, 使用阿基米德性质即可.</p>
-<p><strong>引理2</strong>&#8194; 若实数 $\alpha,\beta$ 在一切满足 $r’-r&lt;\epsilon$ ($\epsilon$是任意正实数) 的有理数 $r,r’$ 之间$,$ 则 $\alpha=\beta.$</p>
-<p><strong>证明</strong>&#8194; 设 $\alpha&lt;\beta$, 则由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性, 存在两有理数 $t,t’$ 使得 $\alpha &lt; t &lt; t’&lt; \beta$.<di><br>那么 $r’-r&gt;t’-t$, 这与 $r’-r&lt;\epsilon,\,\epsilon$ 为任意正实数矛盾. 所以原命题得证.</p>
+<p><strong>引理2</strong>&#8194; 若实数 $\alpha,\beta$ 在一切满足 $r’-r&lt;\varepsilon$ ($\varepsilon$是任意正实数) 的有理数 $r,r’$ 之间$,$ 则 $\alpha=\beta.$</p>
+<p><strong>证明</strong>&#8194; 设 $\alpha&lt;\beta$, 则由 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性, 存在两有理数 $t,t’$ 使得 $\alpha &lt; t &lt; t’&lt; \beta$.<di><br>那么 $r’-r&gt;t’-t$, 这与 $r’-r&lt;\varepsilon,\,\varepsilon$ 为任意正实数矛盾. 所以原命题得证.</p>
 <p>这一引理实际上表明了可以用有理数唯一地逼近实数, 这为我们不引入极限而证明实数域的诸多性质提供了工具.</p>
 <h4 id="连续性-戴德金定理"><a href="#连续性-戴德金定理" class="headerlink" title="连续性 (戴德金定理)"></a>连续性 (戴德金定理)</h4><p>定义实数域的分划, 记作 $\textbf{A}|\textbf{A}’$, 分划的具体定义可仿照有理数域.<di></p>
 <p><strong>定理</strong>&#8194; 对于实数域上的任意分划 $\textbf{A}|\textbf{A}’$, 要么 $\textbf{A}$ 中有最大数, 要么 $\textbf{A}’$ 中有最小数.<di><br>这便是戴德金定理, 它刻画了实数的连续性, 与实数公理中的连续性公理等价.</p>
@@ -280,20 +278,20 @@
 <h4 id="确界原理"><a href="#确界原理" class="headerlink" title="确界原理"></a>确界原理</h4><p><strong>定义</strong>&#8194; 设 $X$ 是实数集, 若存在 $M$ 对一切 $x\in X$  成立 $x\leq M$, 则称 $M$ 是集合 $X$ 的上界, 且此时集合 $X$ 是上有界的.<di><br>若存在 $m$ 对一切 $x\in X$  成立 $x\geq m$, 则称 $m$ 是集合 $X$ 的下界, 且此时集合 $X$ 是上有界的. 若集合 $X$ 有上下界, 称 $X$ 是有界的.<di><br>一切上界中的最小数称为上确界, 记作 $\sup X$, 一切下界中的最大数称为下确界, 记作 $\inf X$.</p>
 <p><strong>定理</strong>&#8194; 若实数集 $X$ 上 (下) 有界, 则它必有上 (下) 确界.<di><br>确界原理与实数的连续性是等价的, 这里使用戴德金定理简单证明.</p>
 <p><strong>证明</strong>&#8194; 只讨论 $X$ 上有界时的情形.<di><br>$1^\circ\; X$ 中有最大数;<di><br>则显然这最大数是 $X$ 的上确界.<di><br>$2^\circ\; X$ 中没有最大数.<di><br>考虑集合 $\textbf{A},\textbf{A}’$, 其中 $\textbf{A}’$ 包含一切 $X$ 的上界, $\textbf{A}$ 包含其它一切实数. 易证 $\textbf{A}|\textbf{A}’$ 是实数域的分划.<di><br>因为 $X$ 中没有最大数, $\textbf{A}$ 中也没有最大数 (假设 $a$ 是 $\textbf{A}$ 的最大数, 那么存在 $x\in X$ 使得 $x&gt;a$, 而 $X$ 中没有最大数, 由实数域的稠密性, 一定存在 $a’&gt;a$ 使得 $x&gt;a’$. 根据 $\textbf{A}$ 的定义, $a’\in\textbf{A}$. 从而 $a$ 不是 $\textbf{A}$ 的最大数, 矛盾), 所以 $\textbf{A}’$ 中必有最小数, 这数即 $X$ 的上确界.</p>
-<p><strong>定义</strong>&#8194; 若实数集合 $X$ 上无界, 也记它的上界为 $+\infty$, 有 $\sup X=+\infty$. 下无界则记下界为 $-\infty$. 有 $\inf X=-\infty$.</p>
+<p><strong>定义</strong>&#8194; 若实数集合 $X$ 上无界, 也记它的上界为 $\infty$, 有 $\sup X=\infty$. 下无界则记下界为 $-\infty$, $\inf X=-\infty$.</p>
 <h3 id="5-实数的运算"><a href="#5-实数的运算" class="headerlink" title="5. 实数的运算"></a>5. 实数的运算</h3><p>我们将基于有理数的运算定义实数的运算, 并说明运算的性质.</p>
 <h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}$, 则 $\alpha+\beta=\sup\{a+b\,|\,a,b\in\mathbb{Q},\,a&lt;\alpha,\,b&lt;\beta\}$. </p>
 <p>以加法结合律为例给出运算性质的证明. 即对 $\alpha,\beta,\gamma\in\mathbb{R}$, 有 $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.</p>
-<p><strong>证明</strong>&#8194; 首先需要指出确界的重要性质: 任取 $\epsilon&gt;0$, 一方面对一切 $x\in X$, 成立 $x&lt;\sup X +\epsilon$, 另一方面, 存在 $x\in X$, 使得 $x&gt;\sup X -\epsilon$.<di><br>于是取 $a,b,c\in\mathbb{Q}$ 且 $a&lt;\alpha,b&lt;\beta,c&lt;\gamma$, 把加法的定义展开, 得到<di></p>
-<center> $(\alpha+\beta)+c-\epsilon<(\alpha+\beta)+\gamma< (\alpha+\beta)+c+\epsilon$. </center>
+<p><strong>证明</strong>&#8194; 首先需要指出确界的重要性质: 任取 $\varepsilon&gt;0$, 一方面对一切 $x\in X$, 成立 $x&lt;\sup X +\varepsilon$, 另一方面, 存在 $x\in X$, 使得 $x&gt;\sup X -\varepsilon$.<di><br>于是取 $a,b,c\in\mathbb{Q}$ 且 $a&lt;\alpha,b&lt;\beta,c&lt;\gamma$, 把加法的定义展开, 得到<di></p>
+<center> $(\alpha+\beta)+c-\varepsilon<(\alpha+\beta)+\gamma< (\alpha+\beta)+c+\varepsilon$. </center>
 
 <p>再作一步展开, </p>
-<center> $l_1 =(a+b)+c-2\epsilon< (\alpha+\beta)+\gamma< (a+b)+c+2\epsilon=r_1$. </center>
+<center> $l_1 =(a+b)+c-2\varepsilon< (\alpha+\beta)+\gamma< (a+b)+c+2\varepsilon=r_1$. </center>
 
 <p>同理有 </p>
-<center> $l_2=a+(b+c)-2\epsilon< \alpha+ (\beta+\gamma)< a+(b+c)+2\epsilon=r_2$. </center>
+<center> $l_2=a+(b+c)-2\varepsilon< \alpha+ (\beta+\gamma)< a+(b+c)+2\varepsilon=r_2$. </center>
 
-<p>由有理数的加法结合律, 易知 $l_1,r_1$ 与 $l_2,r_2$ 是同一界限, 且 $r-l=4\epsilon$, 依实数的阿基米德性, 这可为任意小.<di><br>按引理2, 这两界限间的数是唯一的, 即 $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.<di><br>实数的加法结合律得证. </p>
+<p>由有理数的加法结合律, 易知 $l_1,r_1$ 与 $l_2,r_2$ 是同一界限, 且 $r-l=4\varepsilon$, 依实数的阿基米德性, 它可为任意小.<di><br>按引理2, 这两界限间的数是唯一的, 即 $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.<di><br>实数的加法结合律得证. </p>
 <p>其他性质, 包括下文各运算性质的证明都是相似的.<di><br>事实上, 实数域的连续性保证了这些运算结果的存在性. 而 $\mathbb{Q}$ 在 $\mathbb{R}$ 上的稠密性, 保证了用有理数来定义实数的运算是 “足够精确的”. 所以我们常可以使用引理2得到两个运算结果相等之类的结果, 不同的是想要得到 $r-l$ 为任意小可能需要一些不等式技巧. 我们不必关心具体的证明过程.<di></p>
 <h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><p><strong>定义</strong>&#8194; 设 $\alpha,\beta\in\mathbb{R}_+$, 则 $\alpha\beta=\sup\{a b\,|\,a,b\in\mathbb{Q}_+,\, a&lt;\alpha,\,b&lt;\beta\}$.<di><br>这里只定义了正实数的乘法, 其他情形按符号法则简单推广.</p>
 <h4 id="幂运算和对数"><a href="#幂运算和对数" class="headerlink" title="幂运算和对数"></a>幂运算和对数</h4><p><strong>定义</strong>&#8194; 设 $\alpha\in\mathbb{R}$, $n\in\mathbb{N}^*$,  $\alpha^n=\begin{matrix}\underbrace{\alpha\alpha\cdots\alpha}\\n个\alpha\end{matrix}$. 它的存在性和唯一性是显然的.</p>
@@ -405,7 +403,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -416,7 +414,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
