@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-18T07:32:54.000Z">
-<meta property="article:modified_time" content="2020-07-05T15:16:01.178Z">
+<meta property="article:modified_time" content="2020-09-25T14:16:16.567Z">
 <meta property="article:author" content="Wither">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -234,17 +234,20 @@
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>实数理论是分析学的基础, 毕竟取极限对有理数是不封闭的, 没有实数就不可能有数学分析. 实数的性质对分析学也有诸多帮助.<di><br>实数理论比较底层且抽象, 且涉及其他知识. 本文仅介绍实数公理及一种实数构造方法——戴德金分割, 并讨论构造出来的实数的性质.<br><a id="more"></a></p>
 <h3 id="1-实数公理"><a href="#1-实数公理" class="headerlink" title="1. 实数公理"></a>1. 实数公理</h3><p>实数公理直接给出实数域的定义, 刻画实数域的本质属性. 事实上, 构造实数的方法很多, 但构造出来的实数域, 只要满足实数公理, 就是同构的.</p>
 <h4 id="域公理"><a href="#域公理" class="headerlink" title="域公理"></a>域公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R},x+y\in\mathbb{R}$ 称 $x+y$ 是 $x$ 与 $y$ 的和</li>
-<li>$\forall x,y\in\mathbb{R}(x y\in\mathbb{R})$ 称 $x y$ 是 $x$ 与 $y$ 的积</li>
-<li>$\forall x,y,z\in\mathbb{R}((x+y)+z=x+(y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((x y) z=x (y z))$ (结合律)</li>
-<li>$\forall x,y\in\mathbb{R}(x+y=y+x)$<di><br>$\forall x,y\in\mathbb{R} (xy=y x)$ (交换律)</li>
-<li>$\forall x,y,z\in\mathbb{R}((x+y) z=x  y+x z)$ (分配律)</li>
-<li>$\forall x\in\mathbb{R}(x+e_1=x)$<di><br>$\forall x\in\mathbb{R} (xe_2=x)$ 其中 $e_1=0,e_2=1,e_1,e_2\in\mathbb{R}$ (单位元律)</li>
-<li>$\forall x\in\mathbb{R}(x+(-x)=0)$<di><br>$\forall x\in\mathbb{R}^*(x(x^{-1})=1),$ 其中 $-x,x^{-1}\in\mathbb{R}$ (逆元律)</li>
+<li>$\forall x,y\in\mathbb{R}(x+y\in\mathbb{R})$ 称 $x+y$ 是 $x$ 与 $y$ 的和</li>
+<li>$\forall x,y\in\mathbb{R}(x\cdot y\in\mathbb{R})$ 称 $x\cdot y$ 是 $x$ 与 $y$ 的积</li>
+<li>$\forall x,y,z\in\mathbb{R}((x+y)+z=x+(y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((x\cdot y)\cdot z=x\cdot (y\cdot z))$ (结合律)</li>
+<li>$\forall x,y\in\mathbb{R}(x+y=y+x)$<di><br>$\forall x,y\in\mathbb{R} (x\cdot y=y\cdot x)$ (交换律)</li>
+<li>$\forall x,y,z\in\mathbb{R}((x+y)\cdot z=x\cdot  y+x\cdot z)$ (分配律)</li>
+<li>$\forall x\in\mathbb{R}(x+0=x)$<di><br>$\forall x\in\mathbb{R} (x\cdot1=x)$ 其中 $0,1\in\mathbb{R}$ (单位元律)</li>
+<li>$\forall x\in\mathbb{R}(x+(-x)=0)$<di><br>$\forall x\in\mathbb{R}^*(x\cdot(x^{-1})=1)$ 其中 $-x,x^{-1}\in\mathbb{R}$ (逆元律)</li>
 </ul>
 <h4 id="序公理"><a href="#序公理" class="headerlink" title="序公理"></a>序公理</h4><ul>
-<li>$\forall x,y\in\mathbb{R}, x &lt; y ,\,x =y,\,x&gt;y$ 三者有且仅有一个成立<br>$\forall x,y,z\in\mathbb{R}((x&lt; y\land y &lt; z)\Rightarrow x&lt; z)$ (严格全序性)</li>
-<li>$\forall x,y,z\in\mathbb{R}(x&lt; y\Leftrightarrow (x+z&lt; y+z))$<di><br>$\forall x,y,z\in\mathbb{R}((z&gt; 0\land x&lt; y)\Leftrightarrow x z&lt; y  z)$ (与运算相容)</li>
+<li>$\forall x\in\mathbb{R}(x\leq x)$ (自反性)</li>
+<li>$\forall x,y\in\mathbb{R}((x\leq y\land y\leq x)\Rightarrow x=y)$ (反对称性)</li>
+<li>$\forall x,y,z\in\mathbb{R}((x\leq y\land y\leq z)\Rightarrow x\leq z)$ (传递性)</li>
+<li>$\forall x,y\in\mathbb{R}(x\leq y \lor y\leq x)$ (完全性)</li>
+<li>$\forall x,y,z\in\mathbb{R}(x\leq y\Rightarrow x+z\leq y+z)$<di><br>$\forall x,y\in\mathbb{R}((0\leq x\land 0\leq y)\Rightarrow 0\leq x\cdot y)$ (与运算的相容性)</li>
 </ul>
 <h4 id="连续性公理"><a href="#连续性公理" class="headerlink" title="连续性公理"></a>连续性公理</h4><p>实数的连续性公理:<di> </p>
 <ul>
@@ -255,7 +258,7 @@
 <li>$\forall x\in\mathbb{R}_+\exists a\in\mathbb{N}(a &gt; x)$</li>
 </ul>
 <p>阿基米德性表明, 对于每一实数, 恒有整数比它大. 反过来, 对于每一正实数, 恒有以一为分子、以自然数为分母的数比它小. 有“无穷大”的结构中不存在阿基米德性, 有界的结构也常是如此. </p>
-<p>连续性公理并不只给出了实数的完备性, 因为它蕴含了阿基米德性. 完备性作为度量空间的性质, 通过柯西列来定义, 完备的结构未必有阿基米德性. 完备性与阿基米德性合称连续性.<di><br>不过, 在只讨论实数域时, 常常不区分连续性和完备性.</p>
+<p>连续性公理并不只给出了实数的完备性, 它还蕴含了阿基米德性. 事实上, 完备性作为度量空间的性质, 通过柯西列来定义, 完备的结构未必有阿基米德性. 完备性与阿基米德性合称连续性——直观上就是实数从无穷远处到无穷远处不间断地填满数轴的性质.<di><br>不过, 在只讨论实数域时, 常常不区分连续性和完备性.</p>
 <p>上述三组公理确定了实数域是所谓的“完备阿基米德有序域”, 而且我们已经知道这样的数域如果存在 (无矛盾), 就是唯一的 (在同构意义下).<di><br>于是我们还需要证明这样的一个数域存在, 那么最简单的方法就是从更低的结构和公理出发构造一个数域, 并证明它具有用实数公理定义的实数域的一切性质.</p>
 <h3 id="2-戴德金分割"><a href="#2-戴德金分割" class="headerlink" title="2. 戴德金分割"></a>2. 戴德金分割</h3><h4 id="从有理数构造实数"><a href="#从有理数构造实数" class="headerlink" title="从有理数构造实数"></a>从有理数构造实数</h4><p>我们将直接使用有理数域的性质, 有理数域与实数域唯一不同的一点便是有理数域不具有完备性, 而只具有稠密性. 即 $\forall x,y\in\mathbb{Q}(x&lt; y\Rightarrow \exists z\in\mathbb{Q}(x&lt; z&lt; y))$.</p>
 <p><strong>定义</strong>&#8194; 把有理数域拆分成集合 $A$ 和 $A’$, 满足 $A\cup A’=\mathbb{Q}$, $A,A’$ 非空且 $A$ 中一切数小于 $A’$ 中一切数, 称这样的拆分为有理数域的分划, 记作 $A|A’$, 其中 $A$ 是分划的下组, $A’$ 是分划的上组.</p>
